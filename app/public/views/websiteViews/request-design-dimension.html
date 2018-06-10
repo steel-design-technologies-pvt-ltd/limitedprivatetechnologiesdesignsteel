@@ -1,0 +1,86 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title text-center" id="exampleModalLabel" ng-if="requestDesignType==='designEquipment'">Design Your Equipment</h4>
+            <h4 class="modal-title text-center" id="exampleModalLabel" ng-if="requestDesignType==='planningArea'">Plan Architectural layout</h4>
+            <h4 class="modal-title text-center" id="exampleModalLabel" ng-if="requestDesignType==='commercialKitchen'">Plan your Modular Kitchen</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form name="requestDesignForm">
+                <div class="form-group">
+                    <label for="usermail">Email address</label>
+                    <input type="email" class="form-control" id="usermail" ng-model="requestDesign.usermail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" ng-model="requestDesign.username" aria-describedby="Username" placeholder="Enter Username" required>
+                    <p ng-style="requestDesign.username.length<3 ? {'color': 'red'}:{'color': 'black'}" ng-if="requestDesign.username.length<3">Name cannot be less than 3 characters</p>
+                </div>
+                <div class="form-group">
+                    <label for="userContact">Contact</label>
+                    <input type="tel" class="form-control" id="userContact" ng-model="requestDesign.userContact" aria-describedby="userContact"
+                        placeholder="Enter Contact no" required>
+                        <p ng-style="requestDesign.userContact.length!=10 ? {'color': 'red'}:{'color': 'black'}" ng-if="requestDesign.userContact.length!=10">Please enter 10 digit number, otherwise your request will not be completed</p>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Product to be requested brief description</label>
+                    <textarea type="text" class="form-control" id="productDescription" ng-model="requestDesign.productDescription" aria-describedby="productDescription"
+                        placeholder="Product Description" required></textarea>
+                </div>
+                <div ng-if="requestDesignType=='designEquipment'">
+                    <div class="form-group">
+                        <label for="equipmentName">Name of the Equipment</label>
+                        <input type="text" class="form-control" id="equipmentName" ng-model="requestDesign.equipmentName" aria-describedby="EquipmentName"
+                            placeholder="Enter Equipment Name" required>
+                            <p ng-style="requestDesign.equipmentName.length<3 ? {'color': 'red'}:{'color': 'black'}" ng-if="requestDesign.equipmentName.length<3">Equipment name cannot be less than 3 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="equipmentDimenstion">Equipment Dimension</label>
+                        <input type="text" class="form-control" id="equipmentDimenstion" ng-model="requestDesign.equipmentDimenstion" aria-describedby="EquipmentDimenstion"
+                            placeholder="Enter Equipment Dimension (comma separated)" required>
+                    </div>
+                </div>
+                <div ng-if="requestDesignType=='planningArea'">
+                    <div class="form-group">
+                        <label for="planningAreaName">Planning for (e.g. Home/Shop/offices/Commercial shopping/shopping center/food service center)</label>
+                        <input type="text" class="form-control" id="planningAreaName" ng-model="requestDesign.planningAreaName" aria-describedby="planningAreaName"
+                            placeholder="Enter Area planning for" required>
+                            <p ng-style="requestDesign.planningAreaName.length<3 ? {'color': 'red'}:{'color': 'black'}" ng-if="requestDesign.planningAreaName.length<3">Area name cannot be less than 3 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="areaDimension">Area Dimension (in feet)</label>
+                        <input type="text" class="form-control" id="areaDimension" ng-model="requestDesign.areaDimension" aria-describedby="areaDimension"
+                            placeholder="Enter Area Dimension (comma separated)" required>
+                    </div>
+                </div>
+
+                <div ng-if="requestDesignType=='commercialKitchen'">
+                    <div class="form-group">
+                        <label for="planningKitchenName">Planning for (hotel kitchen/ restaurant kitchen/ dhaba/ canteen / cafeteria/ bar/ food van/ bakery/
+                            modular kitchen(stainless steel)/ office pantry)</label>
+                        <input type="text" class="form-control" id="planningKitchenName" ng-model="requestDesign.planningKitchenName" aria-describedby="planningKitchenName"
+                            placeholder="Enter Kitchen planning for" required>
+                            <p ng-style="requestDesign.planningKitchenName.length<3 ? {'color': 'red'}:{'color': 'black'}" ng-if="requestDesign.planningKitchenName.length<3">Kichen type cannot be less than 3 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="menuServed">Menu to be served</label>
+                        <input type="text" class="form-control" id="menuServed" ng-model="requestDesign.menuServed" aria-describedby="menuServed"
+                            placeholder="Enter menu to be served (comma separated)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kitchenAreaDimension">Kitchen Area Dimension (in feet)</label>
+                        <input type="text" class="form-control" id="kitchenAreaDimension" ng-model="requestDesign.kitchenAreaDimension" aria-describedby="kitchenAreaDimension"
+                            placeholder="Enter Kitchen Area Dimension (comma separated)" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-block" data-dismiss="modal" ng-click="submitKitchenDetails(requestDesign)" ng-disabled="requestDesignForm.$invalid">Submit Dimensions</button>
+        </div>
+    </div>
+</div>

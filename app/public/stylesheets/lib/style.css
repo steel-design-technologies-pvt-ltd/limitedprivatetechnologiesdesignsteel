@@ -1,0 +1,193 @@
+/*top section with logo and and search*/
+.top-section{padding: 0 5%;height: 70px;clear: both}
+.logo{position: absolute;width: 5em;top: 1.25em;}
+.glyphicon{color: rgba(0,0,0,.4);}
+.website-name{color: rgba(0,0,0,.7)}
+
+/*for the carousel on home page*/
+.carousel-inner > .item > img{width: 100%;height: 350px}
+.glyphicon-chevron-right,.glyphicon-chevron-left{color: rgb(255,255,255)}
+
+/*for navigation bar*/
+.navbar{border-radius:0;box-shadow: 0px 2px 5px #111;margin-bottom: 0;border-top: 4px solid #d89209;margin-bottom: 5px;padding:12px;background-color: #b9b9b9}
+.navbar .navbar-header .navbar-brand{color:#222}
+.navbar-default .navbar-nav > li > a{color:#222}
+.navbar-default .navbar-nav > li.active > a,.navbar-default .navbar-nav > li.active > a:hover,.navbar-default .navbar-nav > li.active > a:focus{color:#222;background-color: #a9a9a9;font-size: 15px}
+.navbar-default .navbar-nav > li:hover{background-color: #a9a9a9;border-radius: 4px;border: 1px solid #a9a9a9;font-size:15px;color:#222};
+.navbar-default .navbar-nav > li.active{background-color: #a9a9a9;border-radius: 4px;border: none}
+.navbar-default .navbar-nav > li:hover > a{padding:14px}
+.navbar-brand{font-size:24px; font-weight:700}
+/*for webiste motto*/
+.website-motto{font-size: 1.5em;padding: 20px 15%;text-align: center;line-height: 2em;font-weight: 400}
+/*for company promises*/
+.company-promises{padding: 2em 15%}
+.company-promises .promise{padding: 3em 1em;width:30%;float: left;text-align: center;border:1px solid rgb(207,216,226);cursor: pointer;border-radius:5px;box-shadow:0 0 8px 0px rgb(196,196,196)}
+.company-promises .promise img{width: 116px}
+.company-promises .promise.middle{margin: 0 5%}
+.promise .fa{font-size: 2em}
+.promise p{font-size: 1.25em}
+.promise p.promise-heading{font-size: 1.75em}
+
+.category-headings ul{font-size: 1.5em;font-weight: bold;border:none;}
+.category-headings ul > li{margin:0 1.5em 1em;display:inline-block;float:none;cursor: pointer;}
+
+.category-container #scroller{width: 10000%;}
+.category-container #scroller .scroll-item{float:left;padding: 2px 5px}
+.category-container #scroller.ready > *{display: inline-block;float:left;overflow: hidden;-webkit-animation-timing-function: linear;animation-timing-function: linear;-webkit-animation-timing-function: linear;animation-timing-function: linear;-webkit-animation-delay: 2s;animation-delay: 2s;-webkit-animation-duration: 25s;animation-duration: 25s;-webkit-animation-name: marginator;animation-name: marginator;-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;}
+.category-container #scroller:hover > *{-webkit-animation-play-state: paused;animation-play-state: paused;}
+@-webkit-keyframes marginator {
+	0% {-webkit-transform: translate(0,0);-webkit-transform: translate3d(0,0,0);}
+  100% {-webkit-transform: translate(-100%,0);-webkit-transform: translate3d(-100%,0,0);}
+}
+@keyframes marginator {
+	0% {-webkit-transform: translate(0,0);transform: translate(0,0);-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+  100% {-webkit-transform: translate(-100%,0);transform: translate(-100%,0);-webkit-transform: translate3d(-100%,0,0);transform: translate3d(-100%,0,0);}
+}
+.category-container #scroller-wrapper{overflow: hidden;}
+/*for all the cards*/
+.card{border-radius: 4px;border:1px solid rgb(141,141,141);background: rgb(245,245,245);box-shadow:0px 1px 4px rgba(0,0,0,.6);font-family:arial;}
+.card .heading{color:rgb(56,56,56);}
+
+
+
+/*for additional links*/
+.additional-link-row{height: 3em;background: rgb(207,216,226);}
+.additional-link{height: 3em;padding: .225em 0;cursor: pointer;}
+.additional-link > span {font-size: 1.125em;margin-right:1.5em }
+.glyphicon-arrow-right{display:inline-block;padding:.5em;cursor: pointer;border-radius: 50%;border:2px solid rgb(255,255,255);font-size: 1.125em;}
+
+/*request for engineer form*/
+.quick-contact{background-color:#f8f8f8;min-height: 250px;padding: 1em 14%;border-top:2px solid #e1e1e1}
+.engineer-req-user-details,.call-us{padding: 1em;border-radius:5px;border:1px solid rgb(255,255,255);}
+
+.call-us-container{padding: 1em 1em}
+.call-us{height: 90px;}
+.feature-list{padding-left:20px;}
+.feature-list > li{font-size: 20px}
+
+
+textarea.form-control{resize: none;height: 60px;overflow: auto;}
+
+/*for footer*/
+footer{background: #b9b9b9;padding: 1em 0;padding-bottom: 0}
+.getInContact{text-align: center;margin-bottom: 1em}
+.getInContact input.form-control,.newsletter{background: transparent;border: 1px solid rgb(255,255,255);color: rgb(255,255,255);}
+
+
+.social-connect{text-align: center;margin-bottom: 1em}
+.social-connect ul{font-size: 1.5em;text-align: center;border:none;color: rgb(255,255,255);}
+.social-connect ul > li{margin:0 1em 0;display:inline-block;float:none;cursor: pointer;}
+.fa{    display: inline-block;padding: .5em 0;cursor: pointer;border-radius: 5px;color: black;font-size: 30px;}
+.footer-navigation-links ul{font-size: 1em;text-align: center;border:none;color: rgb(255,255,255);}
+.footer-navigation-links ul > li{margin:0 .2em 0;display:inline-block;float:none;cursor: pointer}
+.footer-navigation-links ul > li > a,.footer-navigation-links ul > li > a:hover{color:#000;font-size: 22px;border-radius:4px}
+.copyright{line-height: 30px;text-align: center}
+.copyright p{margin-bottom: 0;font-size:16px}
+
+/* for buy product online page */
+.products-heading{width: 100%;font-size: 30px;background-color: #f8f8f8;padding: 20px 0;border-bottom:2px solid #e1e1e1;font-weight:700}
+.category-products .product{padding: 15px;border: 1px solid transparent}
+.category-products .product:hover{border:1px solid #e1e1e1;box-shadow: 0 0 10px 1px rgba(0,0,0,.1);}
+.category-products .product .btn-desc{border-top:1px solid #e1e1e1;background-color: #d89209;border-radius:0;font-size:18px;padding:10px 0}
+
+/*for product-description-view*/
+.product-description-view{padding: 15px}
+.product-description-container{width:100%;background-color: #f8f8f8;border:1px solid #e1e1e1;float:left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06)}
+.product-description-view .product-image,.product-description-view .action-bar{width: 100%;padding: 10%;padding-top: 15px}
+.product-description-view .action-bar{padding-top: 0}
+.product-description-view .product-image img{width: 100%}
+.product-description-view .btn-buy{border-radius: 0;background-color: #d89209;font-size: 20px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06)}
+.product-description{padding:15px}
+.contructionDetailList li,.specialReqList li{font-size:21px;line-height:22px}
+
+/*design concept page*/
+.design-concept-tabs .nav-tabs > li > span{display:inline-block;padding: 10px 15px;border:1px solid transparent;cursor: pointer;color: #666}
+.design-concept-tabs .nav-tabs > li > span:hover{border:1px solid transparent;background-color: transparent;color: #333}
+
+.design-container{width: 100%;padding: 20px 15%;}
+
+.design-container .logo-heading img{width: 25%;float: left}
+.design-container .logo-heading .main-heading,.design-container .logo-heading .sub-heading{display: block;width: 75%;padding-left: 10px;text-align: right;float: left}
+.design-container .logo-heading .main-heading{color:#777;font-size: 1.5em;}
+.design-container .logo-heading .sub-heading{color:#555;font-size: 1em;}
+.design-container .logo-heading .facility-description{display: block;width: 100%;float: left;padding-top: 10px;text-align: justify;font-size: 1.25em;line-height: 30px}
+
+/*  sell equipment  */
+.page-heading{background-color: #f8f8f8;margin:0;padding:20px;margin-bottom: 20px}
+.sell-equipment-container{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
+.btn-submit-details{background:#d89209;border-radius: 0;padding: 15px 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06)}
+.selling-notification{font-size: 30px;padding:50px 10px;display: table}
+.userInfoForSelling label{font-size: 24px}
+
+/* design equipment page*/
+.section-header{margin-bottom: 50px;text-decoration: underline;font-size: 28px}
+.design-equipment{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
+.design-equipment p{font-size: 20px}
+.action-button{text-align: center;}
+.btn-design-equipment{background:#d89209;border-radius: 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-bottom:20px;padding: 12px 20px}
+.specification-details li{font-size:20px}
+.caseStudyWrapper{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
+.case-study-description{font-size: 22px}
+.case-study-image{padding: 50px;padding-top: 0}
+.case-study-image img{width: 100%;border:1px solid #e1e1e1}
+.angle-view img{width: 100%;border:1px solid #e1e1e1}
+
+/*  architectural design */
+.mepDescription{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
+.left-imp-points,.working-guidlines{font-size: 22px}
+.btn-architectural{background:#d89209;border-radius: 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-bottom:20px}
+.mepServices{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
+.mepServicesCards{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:400px;font-size:22px;width: 100%}
+
+
+/*    kitchen Design    */
+.kitchenDescriptionCards{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
+.btn-kitchenDesign{background:#d89209;border-radius: 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-bottom:20px;margin-top: 50px}
+.mepServices{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
+
+
+/*for the admin login form*/
+.admin-login-form{padding: 40px 25%}
+.admin-login-form input[type=text],.admin-login-form  input[type=password] {width: 100%;padding: 12px 20px; margin: 8px 0;display: inline-block;border: 1px solid #ccc;box-sizing: border-box;}
+.admin-login-form button {background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;cursor: pointer;width: 100%;}
+.admin-login-form .cancelbtn {width: auto;padding: 10px 18px;background-color: #d89209;}
+.admin-login-form .imgcontainer {text-align: center;margin: 24px 0 12px 0;}
+.admin-login-form img.avatar {width: 40%;border-radius: 50%;}
+.admin-login-form span.psw {float: right;padding-top: 16px;}
+
+
+/*   aboutUs     */
+.aboutUs{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
+
+/*   contact us   */
+.contactInfo{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
+.contact-table tr td{width: 50%;font-size: 18px}
+.map-location{border:1px solid #e1e1e1}
+.map-location iframe{width: 100%}
+
+
+/*for admin landing page */
+.headingSection{width: 100%;height: 2.5em;background-color:rgb(207,216,226);margin-top: 10px;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+.accordian-content{position: relative;border:1px solid rgb(207,216,226);padding: 1em;width: 100%;float: left;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;}
+.company-name span{ width: 40%;float: left;display: block }
+.company-name .form-control{width: 60%;float: left}
+
+
+/* scroll to top button */
+
+#return-to-top {position: fixed;bottom: 20px;right: 20px;background: #d89209;opacity:.8;width: 50px;height: 50px;display: block;text-decoration: none;-webkit-border-radius: 35px;-moz-border-radius: 35px;border-radius: 35px;display: none;-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s ease;-ms-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
+#return-to-top i {color: #fff;margin: 0;position: relative;left: 16px;top: 13px;font-size: 19px;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-ms-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
+#return-to-top:hover {background: rgba(0, 0, 0, 0.9);}
+#return-to-top:hover i {color: #fff;top: 5px}
+
+
+/* add a  page */
+.add-product-form {padding:25px}
+.addProductContainer{padding:0 15px}
+.add-product-form .image-container {width: 100%;min-height: 480px;border-radius: 5px}
+.add-product-form .control-label {text-align: left}
+.add-product-form .product-prev-img {border: 1px solid #e3e3e3;border-radius: 3px}
+.add-product-form .productDimension input{margin-top: 10px}
+
+/* upadte product page  */
+.btn-getProduct{border-radius: 0;background-color: #d89209;font-size: 20px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-top:20px;border-radius:3px}

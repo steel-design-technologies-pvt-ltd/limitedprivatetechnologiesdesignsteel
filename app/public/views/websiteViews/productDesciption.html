@@ -1,0 +1,155 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-description-view" ng-repeat="productDesc in productDescription">
+	<div class="product-description-container">
+		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 product-image-section">
+			<figure class="product-image">
+				<cl-image public-id="{{productDesc.productImageURL}}"></cl-image>
+			</figure>
+			<div class="action-bar">
+				<button class="btn btn-block btn-buy" data-toggle="modal" data-target="#placeOrder">Buy Now</button>
+			</div>
+		</div>
+		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 product-description">
+			<h2 class="product-heading">{{productDesc.name}}</h2>
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td>
+							<big>
+								<b>Product Id</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.productID}}</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Price</b>
+							</big>
+						</td>
+						<td>
+							<big>Rs. {{productDesc.productPrice}} /- (inclusive GST)</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Size</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.length}} mm X {{productDesc.width}} mm X {{productDesc.height}} mm</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Quantity</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.quantity}}</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Rating</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.rating}} /5
+								<small>(10 ratings out of 43 product sold)</small>
+							</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Warranty</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.warranty}} months</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Delivery</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.deliveryTime}}</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Payment Mode</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.paymentMode}}</big>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>
+								<b>Highlights</b>
+							</big>
+						</td>
+						<td>
+							<big>{{productDesc.built_material}}</big>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-condensed">
+				<tbody>
+					<tr>
+						<td>
+							<h3>Application</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<big>{{productDesc.application}}</big>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-condensed">
+				<tbody>
+					<tr>
+						<td>
+							<h3>Construction Details</h3>
+						</td>
+					</tr>
+					<tr ng-repeat="detail in productDesc.construction_details">
+						<td>
+							<big>{{$index+1}}. {{detail}}</big>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table table-condensed">
+				<tbody>
+					<tr>
+						<td>
+							<h3>Special Requirement For this Product</h3>
+						</td>
+					</tr>
+					<tr ng-repeat="requirement in productDesc.special_req">
+						<td>
+							<big>{{$index+1}}. {{requirement}}</big>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<place-order id="placeOrder" class="modal fade" role="dialog"></place-order>
+	</div>
+</div>

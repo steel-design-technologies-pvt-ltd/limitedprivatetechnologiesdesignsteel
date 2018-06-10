@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="admin">SteelDesignTechnology</a>
+    </div>
+    <ul class="nav navbar-nav"> 
+      <li><a ui-sref="admin.landing">Landing Page</a></li>     
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Products
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a ui-sref="admin.addProduct" ui-sref-active="active">Add New Product</a></li>                  
+        </ul>
+      </li>          
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid">	
+  <ui-view>
+  <div class="admin-login-form">
+      <form>
+        <div class="imgcontainer">
+          <img src="images/static-images/avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+  </ui-view>
+</div>

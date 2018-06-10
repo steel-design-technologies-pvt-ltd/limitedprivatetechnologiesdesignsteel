@@ -1,0 +1,96 @@
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    <div class="form-group">
+        <label class="control-label" for="productToUpdate">Product id to update:</label>
+        <input type="text" class="form-control" id="productToUpdate" placeholder="Enter Product ID" ng-model="product.id">
+    </div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <button class="btn btn-getProduct" ng-click="getProductToUpdate(product.id)">Get the Product</button>
+</div>
+<div class="clearfix"></div>
+<div class="update-product-container">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <cl-image public-id="{{updatedProduct.productImageURL}}"></cl-image>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Update image path" id="ProductImageURL" ng-model="updatedProduct.productImageURL">
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label class="control-label" for="productName">Product Name:</label>
+            <input type="text" class="form-control" id="productName" placeholder="Enter Product Name" ng-model="updatedProduct.name">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="product_price">Product Price</label>
+            <input type="text" class="form-control" id="product_price" placeholder="Enter Product Price" ng-model="updatedProduct.productPrice">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="product_ID">Product ID</label>
+            <input type="text" class="form-control" id="product_ID" placeholder="Enter Product ID number" ng-model="updatedProduct.productID" ng-disabled="updatedProduct.productID!=''">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="product_code">Product Code</label>
+            <input type="text" class="form-control" id="product_code" placeholder="Enter product Code" ng-model="updatedProduct.productCode">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="vendorID">Enter Vendor ID it belongs to</label>
+            <input type="text" class="form-control" id="vendorID" placeholder="Enter Vendor ID" ng-model="updatedProduct.vendorID">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="availabilityType">Product Availability Type</label>
+            <input type="text" class="form-control" id="availabilityType" placeholder="Enter Product Availability Type" ng-model="updatedProduct.availabilityType">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="">Enter Dimensions of product</label>
+            <div class="productDimension">
+                <input type="text" class="form-control" id="productLength" placeholder="Enter Product length" ng-model="updatedProduct.length">
+            </div>
+            <div class="productDimension">
+                <input type="text" class="form-control" id="productWidth" placeholder="Enter Product width" ng-model="updatedProduct.width">
+            </div>
+            <div class="productDimension">
+                <input type="text" class="form-control" id="productHeight" placeholder="Enter Product height" ng-model="updatedProduct.height">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="built_material">Enter Product Built Material</label>
+            <input type="text" class="form-control" id="built_material" placeholder="Enter Product Material Type" ng-model="updatedProduct.built_material">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productApplications">Enter Product Applications</label>
+            <input type="text" class="form-control" id="productApplications" placeholder="Enter Product applications" ng-model="updatedProduct.application">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="constructionDetails">Enter Product Construction details</label>
+            <textarea type="text" class="form-control" id="constructionDetails" placeholder="Enter Product Constuction Details with @ separated text"
+                ng-model="updatedProduct.construction_details"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productQuantity">Enter Product Quantity</label>
+            <input type="text" class="form-control" id="productQuantity" placeholder="Enter Product quantity in number" ng-model="updatedProduct.quantity">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productWarranty">Enter Product Warranty</label>
+            <input type="text" class="form-control" id="productWarranty" placeholder="Enter Product warranty in Months" ng-model="updatedProduct.warranty">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productRating">Enter Product Rating</label>
+            <input type="text" class="form-control" id="productRating" placeholder="Enter Product Rating in number" ng-model="updatedProduct.rating">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="deliverytDate">Expected Delivery of the product</label>
+            <input type="text" class="form-control" id="deliverytDate" placeholder="Enter Product delivery time" ng-model="updatedProduct.deliveryTime">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productPaymentMethod">Enter Payment Method for product</label>
+            <input type="text" class="form-control" id="productPaymentMethod" placeholder="Enter Product Payment method" ng-model="updatedProduct.paymentMode">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productPaymentMethod">Special Requirement</label>
+            <input type="text" class="form-control" id="productPaymentMethod" placeholder="Enter special requirements for the product @ separated values" ng-model="updatedProduct.special_req">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" ng-click="updateThisProduct(updatedProduct)">Update Product</button>
+        </div>
+    </div>
+</div>

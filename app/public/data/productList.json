@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "5ae5d23e9a9ec10dd2ab2d2a",
+    "name": "Aata maida bin 2",
+    "productImageURL": "products/AATA_MAIDA_BIN.jpg",
+    "productID": "0001",
+    "productCode": "MT",
+    "length": 120,
+    "width": 150,
+    "height": 140,
+    "built_material": "Stainless steel (304 grade)",
+    "application": "Widely used in hotel ,restaurant & catering work industries in kitchen & food preparation work",
+    "productPrice": 125000,
+    "vendorID": "001",
+    "productAvailability": "",
+    "availabilityType": "F",
+    "isProductSold": false,
+    "quantity": 1,
+    "warranty": 12,
+    "rating": 4,
+    "deliveryTime": "within 7-8 working days",
+    "paymentMode": "cheque on delivery / NEFT/ONLINE NET BANKING",
+    "__v": 0,
+    "special_req": [
+      "Electricity ",
+      " wiring ",
+      " fitting"
+    ],
+    "construction_details": [
+      "text1 ",
+      " text 2 ",
+      " text 3"
+    ],
+    "$$hashKey": "object:24"
+  }
+]

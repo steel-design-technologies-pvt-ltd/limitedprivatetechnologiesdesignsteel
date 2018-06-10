@@ -1,0 +1,48 @@
+<h1 class="text-center page-heading">Sell Your Equipment</h1>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="sell-equipment-container">
+        <form name="sellEquipment">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="selling-notification">
+                    <p>
+                        {{sellEquipmentStaticData.sellNotification}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="userInfoForSelling">
+                    <div class="form-group">
+                        <label for="usermail">{{sellEquipmentStaticData.sellEquipmentForm.mailLabel}}<sup>*</sup></label>
+                        <input type="email" class="form-control" id="usermail" ng-model="sell.usermail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">{{sellEquipmentStaticData.sellEquipmentForm.usernameLabel}}<sup>*</sup></label>
+                        <input type="text" class="form-control" id="username" ng-model="sell.username" aria-describedby="Username" placeholder="Enter Username" required>
+                        <p ng-style="sell.username.length<3 ? {'color': 'red'}:{'color': 'black'}" ng-if="sell.username.length<3">Name cannot be less than 3 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="userContact">{{sellEquipmentStaticData.sellEquipmentForm.contactLabel}}<sup>*</sup></label>
+                        <input type="tel" class="form-control" id="userContact" ng-model="sell.userContact" aria-describedby="userContact" placeholder="Enter Contact no" required>
+                        <p ng-style="sell.userContact.length!=10 ? {'color': 'red'}:{'color': 'black'}" ng-if="sell.userContact.length!=10">Please enter 10 digit number, otherwise your request will not be completed</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="userCompanyName">{{sellEquipmentStaticData.sellEquipmentForm.companyNameLabel}}<sup>*</sup></label>
+                        <input type="text" class="form-control" id="userCompanyName" ng-model="sell.userCompanyName" aria-describedby="userCompanyName"
+                            placeholder="Enter company name" required>
+                            <p ng-style="sell.userCompanyName.length<3 ? {'color': 'red'}:{'color': 'black'}" ng-if="sell.userCompanyName.length<3">Company name cannot be less than 3 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">{{sellEquipmentStaticData.sellEquipmentForm.descriptionLabel}}<sup>*</sup></label>
+                        <textarea type="text" class="form-control" id="productDescription" ng-model="sell.productDescription" aria-describedby="productDescription"
+                            placeholder="Product Description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actionButton">
+                <button type="button" class="btn btn-block btn-submit-details" ng-disabled="sellEquipment.$invalid" ng-click="sellEquipmentData()">{{sellEquipmentStaticData.sellEquipmentForm.buttonLabel}}</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<!-- #################################################### -->
+<!-- layout navigation section	 -->
+<!-- #################################################### -->
+<nav class="navbar navbar-default navbar-fixed">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navigation-bar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" ui-sref="layout.{{staticDataText.siteHeading.link}}" ui-sref-active="active" activate-option>{{staticDataText.siteHeading.text}}</a>
+		</div>
+		<div class="collapse navbar-collapse" id="top-navigation-bar">
+			<ul class="nav navbar-nav">
+				<li activate-option ng-repeat="option in staticDataText.navbarOptionsLeft">
+					<a ui-sref="layout.{{option.navLink}}">{{option.navtext}}</a>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li activate-option ng-repeat="option in staticDataText.navbarOptionsRight">
+					<a ui-sref="layout.{{option.navLink}}">{{option.navtext}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<ui-view>this is ui</ui-view>
+	</div>	
+</div>
+<!-- #################################################### -->
+<!-- Request for the engineer -->
+<!-- #################################################### -->
+
+<section class="quick-contact">
+	<h2 class="text-left">Company functional area</h2>
+	<div class="user-details-for-engineer"> 
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 call-us-container">
+			<ul class="feature-list">
+				<li ng-repeat="text in staticDataText.functionalAreaList">
+					{{text}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>	
+<!-- #################################################### -->
+<!-- Website Footer section	 -->
+<!-- #################################################### -->	
+<footer>
+	<div class="social-connect">
+		<ul class="nav nav-tabs">
+			<li><span class="fa fa-facebook"></span></li>
+			<li><span class="fa fa-twitter"></span></li>
+			<li><span class="fa fa-instagram"></span></li>
+		</ul>
+	</div>
+	<div class="footer-navigation-links">
+		<ul class="nav nav-tabs">
+			<li><a ui-sref="layout.{{staticDataText.privacyLink.link}}">{{staticDataText.privacyLink.linkText}}</a></li>		
+		</ul>
+	</div>
+	<div class="copyright">
+		<p>&copy; {{staticDataText.copyrightText}}</p>
+	</div>
+</footer>
+<!-- scroll to top button -->
+<a href="javascript:void(0)" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+<script>
+	$(window).scroll(function () {
+		if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+			$('#return-to-top').fadeIn(200); // Fade in the arrow
+		} else {
+			$('#return-to-top').fadeOut(200); // Else fade out the arrow
+		}
+	});
+	$('#return-to-top').click(function () { // When arrow is clicked
+		$('body,html').animate({
+			scrollTop: 0 // Scroll to top of body
+		}, 500);
+	});
+</script>

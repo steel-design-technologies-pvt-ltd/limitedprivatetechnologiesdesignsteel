@@ -1,0 +1,35 @@
+<h1 class="text-center page-heading">{{designEquipmentStaticData.designpageHeader}}</h1>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div class="design-equipment">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<h3>{{designEquipmentStaticData.designEquipmentLeft.labelName}}</h3>
+			<p>{{designEquipmentStaticData.designEquipmentLeft.textContent}}</p>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<h3>{{designEquipmentStaticData.designEquipmentRight.labelName}}</h3>
+			<p>{{designEquipmentStaticData.designEquipmentRight.textContent}}</p>
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 action-button">
+		<button class="btn btn btn-design-equipment" data-toggle="modal" data-target="#designEquipment">{{designEquipmentStaticData.buttonLabel}}</button>
+	</div>
+	<request-design class="modal fade" id="designEquipment" tabindex="-1" role="dialog" aria-labelledby="designEquipmentLabel" aria-hidden="true"></request-design>
+	<div class="caseStudyWrapper">
+		<h3 class="text-center section-header">Case Study</h3>
+		<div class="col-lg-6 col-md-6 case-study-description">
+			<h3>{{designEquipmentStaticData.caseStudyContent[0]}}</h3>
+			<p>{{designEquipmentStaticData.caseStudyContent[1]}}</p>
+		</div>
+		<div class="col-lg-6 col-md-6 case-study-image">
+			<img src="images/products/worktable.jpg" alt="work table">
+		</div>
+		<div class="col-lg-12 col-sm-12 angle-view">
+			<h3 class="text-center section-header">{{designEquipmentStaticData.angleViewHeader}}</h3>
+			<img src="images/products/angle-views.png" alt="work table angle views">
+			<h3>{{designEquipmentStaticData.specificationContent.header}}:</h3>
+			<ul class="specification-details">
+				<li ng-repeat="detail in designEquipmentStaticData.specificationContent.specificationList">{{detail}}</li>
+			</ul>
+		</div>
+	</div>
+</div>

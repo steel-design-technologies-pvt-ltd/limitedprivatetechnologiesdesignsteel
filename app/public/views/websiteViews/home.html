@@ -1,0 +1,121 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="{{$index}}" ng-repeat="data in sliderData" ng-class="{'active': $index === 0}"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div ng-repeat="data in sliderData" class="item" ng-class="{'active': $index === 0}">
+        <cl-image public-id="home-slider/carousel{{$index}}.jpg" ></cl-image>
+        <div class="carousel-caption">
+          <h3>{{data.slideHeading}}</h3>
+          <p>{{data.slideDescription}}</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- addtional links below carousel -->
+
+<!-- website motto text -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 website-motto">
+  <p>{{homeStaticData.websiteMotto}}</p>
+</div>
+<!-- website promises  -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 company-promises">
+  <div class="col-xs-12 promise" ng-repeat="promise in homeStaticData.companyPromise" ng-class="{'middle': $index === 1}">
+    <cl-image public-id="{{promise.imageLink}}{{$index}}.png" ></cl-image>
+    <p class="promise-heading">{{promise.promiseHeading}}</p>
+    <p>{{promise.promiseText}}</p>
+  </div>
+</div>
+<!-- product category at home -->
+<!-- <div class="category-container">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 category-headings">
+    <ul class="nav nav-tabs clearfix">
+      <li>Top Products</li>
+    </ul>
+    <div id="scroller-wrapper">
+      <div id="scroller">
+        <div class="scroll-item">
+          <img src="https://placehold.it/350x150">
+          <p>Hello this product</p>
+        </div>
+        <div class="scroll-item">
+          <img src="https://placehold.it/351x150">
+          <p>Hello this product</p>
+        </div>
+        <div class="scroll-item">
+          <img src="https://placehold.it/352x150">
+          <p>Hello this product</p>
+        </div>
+        <div class="scroll-item">
+          <img src="https://placehold.it/353x150">
+          <p>Hello this product</p>
+        </div>
+        <div class="scroll-item">
+          <img src="https://placehold.it/354x150">
+          <p>Hello this product</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 category-product">
+
+  </div>
+</div>
+<!-- testmonial from the client -->
+<div class="container cutomer-testimonials">
+  <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+      <!-- Bottom Carousel Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#quote-carousel" data-slide-to="$index" ng-repeat="testimony in homeStaticData.testimonyList" ng-class="{'active': $index === 0}"></li>
+      </ol>
+      <!-- Carousel Slides / Quotes -->
+      <div class="carousel-inner">
+        <!-- Quote 1 -->
+        <div class="item" ng-repeat="testimony in homeStaticData.testimonyList" ng-class="{'active': $index === 0}">
+          <blockquote>
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <img class="img-circle" src="{{testimony.imageUrl}}">
+              </div>
+              <div class="col-sm-9 ">
+                <p>{{testimony.testimonyText}}</p>
+                <small>{{testimony.testimonyUsername}}</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Carousel Buttons Next/Prev -->
+      <a data-slide="prev " data-target="#quote-carousel " class="left carousel-control "><i class="fa fa-chevron-left "></i></a>
+      <a data-slide="next " data-target="#quote-carousel " class="right carousel-control "><i class="fa fa-chevron-right "></i></a>
+    </div>                          
+  </div>
+</div>  
+<script type="text/javascript ">
+  /*setTimeout(function(){
+  $(function () {
+    var $first=$('#scroller>:first-child');
+    console.log($first.outerWidth(true));
+    var slides = $('#scroller').children();
+    $('#scroller').width($first.outerWidth(true)*slides);
+    $first.clone(true).appendTo('#scroller');
+    $('#scroller').addClass('ready');
+   });  
+},100);*/
+</script>

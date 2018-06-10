@@ -1,0 +1,42 @@
+{
+	"companyTitle": "Hospitality World",
+	"leftNav": [{
+		"tabName": "Equiments",
+		"pageLink": "",
+		"sublink": [{
+			"subtabName": "Stainless Steel",
+			"pageLink": "",
+			"sublink": ""
+		}, {
+			"subtabName": "Plastic",
+			"pageLink": "",
+			"sublink": ""
+		}]
+	}, {
+		"tabName": "Usage Category",
+		"pageLink": "",  
+		"sublink": [{
+			"subtabName": "Dhaba",
+			"pageLink": "",
+			"sublink": ""
+		}, {
+			"subtabName": "Restaurant",
+			"pageLink": "",
+			"sublink": ""
+		}]
+	}, {
+		"tabName": "The Design Concept",
+		"pageLink": "",
+		"sublink": ""
+	}],
+	"rightNav": [{
+		"tabName": "About Us",
+		"pageLink": "",
+		"sublink": ""
+	},{
+		"tabName": "Contact Us",
+		"pageLink": "",
+		"sublink": ""
+	}]
+
+}

@@ -1,0 +1,41 @@
+<ui-view>
+	<div class="side-nav-products-and-offer-container">
+		<div class="products-heading text-center">
+			<big>{{buyEquipmentStaticData.pageHeading}}</big>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3  col-xs-12">
+			<h3>{{buyEquipmentStaticData.filterSection}}</h3>
+			<ul class="nav other-categories">
+				<li>
+					<input type="checkbox" name="restaurant">
+					<span>Restaurant Products</span>
+				</li>
+			</ul>
+		</div>
+		<div class="col-lg-7 col-md-7 col-sm-9 col-xs-12">
+			<div class="category-products">
+				<!-- category products starts here -->
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 product" ng-repeat="product in productList">
+					<div class="prod_img_con">
+						<cl-image public-id="{{product.productImageURL}}" ></cl-image>
+					</div>
+					<div class="product-feature-description">
+						<p class="main-heading">
+							<big>{{product.name}}</big>
+						</p>
+						<p class="sub-heading">{{product.built_material}}</p>
+						<p class="price">{{product.productPrice}} Rs.</p>
+						productId: {{product.productID}}
+						<div class="price-n-action">
+							<button class="btn btn-block btn-desc" ui-sref="layout.equipments.productDesciption({productId :'{{product.productID}}'})">See Description & Buy</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-2 col-sm-2 hidden-sm hidden-xs">
+			<h3>{{buyEquipmentStaticData.offerSection}}</h3>
+		</div>
+	</div>
+</ui-view>

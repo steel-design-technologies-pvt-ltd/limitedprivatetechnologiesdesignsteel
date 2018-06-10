@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/lib/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/lib/quote-carousel.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/lib/angular-growl.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/lib/style.css">
+</head>
+<body ng-app="appModule">
+	<div growl></div>
+	<ui-view></ui-view>
+	<script type="text/javascript" src="./javascripts/lib/jquery.js"></script>
+	<script type="text/javascript" src="./javascripts/lib/bootstrap.js"></script>
+	<script type="text/javascript" src="./javascripts/custom/quote-carousel.js"></script>
+
+	<script type="text/javascript" src="/javascripts/ng/angular.js"></script>
+	<script type="text/javascript" src="./javascripts/ng/angular-route.js"></script>
+	<script type="text/javascript" src="./javascripts/ng/angular-ui-router.js"></script>
+	<script type="text/javascript" src="/javascripts/ng/angular-animate.min.js"></script>
+	<script type="text/javascript" src="./javascripts/ng/angular-aria.min.js"></script>
+	<script type="text/javascript" src="./javascripts/ng/ng-file-upload.js"></script>
+	<script type="text/javascript" src="/javascripts/ng/angular-growl.js"></script>
+	<!-- common for all pages pages -->
+	<script type="text/javascript" src="./javascripts/app-module.js"></script>
+	<script type="text/javascript" src="./cloudinary-angular/dist/cloudinary-angular.min.js"></script>
+
+
+	<script type="text/javascript" src="./javascripts/services/log-service.js"></script>
+
+	<!-- for constants -->
+	<script type="text/javascript" src="./javascripts/constants/product-path-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/app-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/layout-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/home-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/buy-equipment-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/sell-equipment-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/design-equipment-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/architectural-design-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/kitchen-design-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/aboutus-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/contactus-constants.js"></script>
+	<script type="text/javascript" src="./javascripts/constants/error-constants.js"></script>
+	
+	<!-- for website pages -->
+	<script type="text/javascript" src="./javascripts/controllers/website-layout-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/website-layout-service.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/home-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/home-services.js"></script>
+	
+
+	<script type="text/javascript" src="./javascripts/controllers/design-equipment-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/architectural-planning-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/kitchen-design-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/request-design-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/directives/request-design-dimension-directive.js"></script>
+	<script type="text/javascript" src="./javascripts/services/request-design-service.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/usage-category-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/usage-category-service.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/product-description-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/product-description-services.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/sell-equipments-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/sell-equipments-service.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/send-quotation-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/send-quotation-service.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/about-us-controller.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/privacy-faq-controller.js"></script>
+	<!-- for admin pages -->
+	<script type="text/javascript" src="./javascripts/controllers/admin-main-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/admin-tab-service.js"></script>
+	<!-- for admin sub views -->
+	<script type="text/javascript" src="./javascripts/directives/image-upload-directive.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/landing-page-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/landing-page-service.js"></script>
+
+	<script type="text/javascript" src="./javascripts/controllers/add-product-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/add-product-service.js"></script>
+	<!-- directives -->
+	<script type="text/javascript" src="./javascripts/directives/place-order-directive.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/place-order-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/place-order-service.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/thanks-controller.js"></script>
+	
+
+	<script type="text/javascript" src="./javascripts/controllers/update-product-controller.js"></script>
+	<script type="text/javascript" src="./javascripts/services/update-product-service.js"></script>
+	<!-- dom manipulation directive -->
+	<script type="text/javascript" src="./javascripts/directives/activate-option-directive.js"></script>
+</body>
+</html>
