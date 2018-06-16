@@ -8,6 +8,9 @@
 .carousel-inner > .item > img{width: 100%;height: 350px}
 .glyphicon-chevron-right,.glyphicon-chevron-left{color: rgb(255,255,255)}
 
+/* for testimonial */
+#mainCarouselArea.carousel-inner{border: 3px solid rgb(192,192,192);border-top: none;border-bottom: none}
+
 /*for navigation bar*/
 .navbar{border-radius:0;box-shadow: 0px 2px 5px #111;margin-bottom: 0;border-top: 4px solid #d89209;margin-bottom: 5px;padding:12px;background-color: #b9b9b9}
 .navbar .navbar-header .navbar-brand{color:#222}
@@ -57,7 +60,7 @@
 .glyphicon-arrow-right{display:inline-block;padding:.5em;cursor: pointer;border-radius: 50%;border:2px solid rgb(255,255,255);font-size: 1.125em;}
 
 /*request for engineer form*/
-.quick-contact{background-color:#f8f8f8;min-height: 250px;padding: 1em 14%;border-top:2px solid #e1e1e1}
+.quick-contact{background-color:#f8f8f8;min-height: 250px;padding: 1em 12%;border-top:2px solid #e1e1e1}
 .engineer-req-user-details,.call-us{padding: 1em;border-radius:5px;border:1px solid rgb(255,255,255);}
 
 .call-us-container{padding: 1em 1em}
@@ -116,13 +119,17 @@ footer{background: #b9b9b9;padding: 1em 0;padding-bottom: 0}
 .page-heading{background-color: #f8f8f8;margin:0;padding:20px;margin-bottom: 20px}
 .sell-equipment-container{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
 .btn-submit-details{background:#d89209;border-radius: 0;padding: 15px 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06)}
-.selling-notification{font-size: 30px;padding:50px 10px;display: table}
+.selling-notification p{font-size: 24px; margin-left: 20px}
+.selling-notification p:nth-child(1){font-size: 28px;padding:50px 10px;display: table;text-decoration: underline;margin-left: 0px}
+
 .userInfoForSelling label{font-size: 24px}
 
 /* design equipment page*/
 .section-header{margin-bottom: 50px;text-decoration: underline;font-size: 28px}
 .design-equipment{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
+.design-equipment h3{text-decoration: underline}
 .design-equipment p{font-size: 20px}
+.design-equipment .left-block{border-right: 1px solid #e1e1e1;}
 .action-button{text-align: center;}
 .btn-design-equipment{background:#d89209;border-radius: 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-bottom:20px;padding: 12px 20px}
 .specification-details li{font-size:20px}
@@ -133,18 +140,22 @@ footer{background: #b9b9b9;padding: 1em 0;padding-bottom: 0}
 .angle-view img{width: 100%;border:1px solid #e1e1e1}
 
 /*  architectural design */
-.mepDescription{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
-.left-imp-points,.working-guidlines{font-size: 22px}
+.mepDescription{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px;;margin-top: 20px}
+.left-imp-points{font-size: 22px}
+
+.layout-img img{width: 100%; border: 3px solid #e1e1e1}
+.left-imp-points img,.working-guidlines img{width:100%}
+.layout-img{padding:0 50px;margin-bottom: 20px;margin-top:20px}.working-guidlines{padding:0px 0}
 .btn-architectural{background:#d89209;border-radius: 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-bottom:20px}
-.mepServices{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;width: 100%;margin-bottom: 20px}
-.mepServicesCards{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:400px;font-size:22px;width: 100%}
+
+.mepServicesCards{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:550px;font-size:22px;width: 100%}
 
 
 /*    kitchen Design    */
 .kitchenDescriptionCards{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
 .btn-kitchenDesign{background:#d89209;border-radius: 0;font-size: 22px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);margin-bottom:20px;margin-top: 50px}
 .mepServices{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
-
+.sample-modular-kitchen-design img{width: 100%;border: 1px solid #e1e1e1;margin-bottom: 50px}
 
 /*for the admin login form*/
 .admin-login-form{padding: 40px 25%}
@@ -157,7 +168,7 @@ footer{background: #b9b9b9;padding: 1em 0;padding-bottom: 0}
 
 
 /*   aboutUs     */
-.aboutUs{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}
+.aboutUs{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;;margin-top:20px;min-height:200px;font-size:22px;width: 100%}
 
 /*   contact us   */
 .contactInfo{background-color: #f8f8f8;border: 1px solid #e1e1e1;float: left;border-radius: 4px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.06);padding: 15px;margin-bottom: 20px;min-height:200px;font-size:22px;width: 100%}

@@ -1,19 +1,22 @@
 (function(){
     var appModule = angular.module('appModule');
     appModule.constant('architecturalDesignConstants',{
-        "pageHeading": "Design your Architectural layout @just 100 Rs. with free quote",
-        "civilSectionHeading": "Civil work planning & MEP service planning",
-        "civilSubHeading": "for Home/Offices/Shops/Commercial Shopping center/Food Service Center",
+        "pageHeading": "Design your commercial Kitchen/food service projects Architectural layout @just 25 Rs. per sq. feet",
+        "cloudinaryImagePaths": {
+            "leftImg": "kitchen-bar-archPlan",
+            "rightImg": "canteen-archPlan"
+        },
         "civilDesciption": [
-            "Proper Architect designs for home & commercial area",
+            "Proper Architect designs for Food Service projects.",
             "Use of vastu concept for operational planning of area/floor",
-            "Working on architect standards as per norms",
+            "Working on architect designs as per standards norms.",
             "Whole area is developed as per customer need to provides a best options",
             "Maximize the space utilization & minimize the development cost",
             "We use the latest concept of designing & development",
-            "There is also option of revisioning the layout planning as per customer requirement"
+            "There is also option of redesigning the layout planning as per customer requirement"
         ],
         "civilWorkingGuideline": [
+            "Projects under consideration are - Hotel/Restaurants/Food service center/Office pantry/Bakry/Canteen/Movable Kitchen/Fast food center/Home Kitchen/Dhabas etc.",
             "Specific planning in 2D & 3D view layout of area with equipment planning as desire by client",
             "Elevation & section of all area with description",
             "Various options to be developed for better finalization",

@@ -1,7 +1,7 @@
 (function(){
     var appModule = angular.module('appModule');
     appModule.constant('homeConstants',{
-        "websiteMotto": "Online Sale of equipment, new development of ferrous and stainless steel equipment, commercial and residential kitchen layout planning.",
+        "websiteMotto": "Online food service and hospitality equipment trading. Development of new ferrous and stainless steel equipment, commercial and residential kitchen layout and facility planning.",
         
         "companyPromise": [{
             "promiseHeading": "Our Promise",
@@ -19,16 +19,16 @@
         
         "testimonyList": [{
             "imageUrl": "images/testimonial/person.jpg",
-            "testimonyText": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!",
-            "testimonyUsername": "Shivir Kumar Tomar"
+            "testimonyText": "I have been trading with 'SDT Technology' for past 1 year, it is good to have them online. There are lot of customer like us looking for your services.I have been a satisfied cutomer, keep up the good work.",
+            "testimonyUsername": "Ramesh (dhaba owner)"
         },{
             "imageUrl": "images/testimonial/person.jpg",
-            "testimonyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.",
-            "testimonyUsername": "Shubham"
+            "testimonyText": "Wonderful kitchen layout planning services in decent price. I took their service for my restaurant kitchen planning and within short time they provided a good layout.I would like to thank the team for their quick work and taking special attention for my limited time request.",
+            "testimonyUsername": "Manvinder Singh (Customer)"
         },{
             "imageUrl": "images/testimonial/person.jpg",
-            "testimonyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.",
-            "testimonyUsername": "Anonymous"
+            "testimonyText": "I would like to recommend 'sdt tech' services to everyone who have limited space and are thinking of re-planning their layout to maximize the space utilisation for their cafes, dhabas, restaurants.",
+            "testimonyUsername": "Kushal Simra"
         }]
     });
 })();

@@ -6,16 +6,16 @@
             "link": "home"
         },
         "navbarOptionsLeft": [{
-            "navtext": "Buy Online Equipments",
+            "navtext": "Buy Equipment",
             "navLink": "equipments"
         },{
-            "navtext": "Sell Your Equipments",
+            "navtext": "Sell Equipment",
             "navLink": "sellEquipment"
         },{
             "navtext": "Design Equipment",
             "navLink": "designEquipment"
         },{
-            "navtext": "Architectural/ MEP services",
+            "navtext": "Kitchen Arch./MEP Service",
             "navLink": "architecturalDesign"
         },{
             "navtext": "Design Modular Kitchen",
@@ -29,12 +29,12 @@
             "navLink": "contactus"
         }],
         "functionalAreaList": [
-            "Architect layout planing for home ,restaurant &amp; food service projects with facility planing",
-            "Design &amp; development of S.S./M.S. equipment/shop drawing as per requirement in hospitality projects/home/industries purpose",
-            "S.S. modular kitchen design &amp; fabrication",
-            "Online buying &amp; selling of food service /Commercial kitchen equipment"
+            "Architect layout planning for restaurant and food service projects with facility planning.",
+            "Design and development of S.S./M.S. equipment/shop drawing as per requirement in hospitality projects/home/industrial purpose.",
+            "S.S. modular kitchen design and fabrication.",
+            "Online buying and selling of food service/Kitchen equipment."
         ],
-        "copyrightText": "SteelDesignTechnology. All Rights Reserved",
+        "copyrightText": "SDT SteelDesign Pvt Ltd. All Rights Reserved",
         "privacyLink": {
             "linkText": "Privacy Policy & FAQs",
             "link": "privacyNfaq"

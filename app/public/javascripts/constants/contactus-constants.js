@@ -3,15 +3,15 @@
     appModule.constant('contactusConstants',{
         "pageHeading": "Contact Us",
         "tableData": {
-            "headerLabel": "Steel Design Technology",
-            "descriptionText": "Architect designs, creative art & development of stainless steel & ferrous equipment For home & food service hospitality projects (Online buying & selling equipment)",
+            "headerLabel": "SDT SteelDesign Pvt Ltd.",
+            "descriptionText": "Architect designs, creative art & development of stainless steel & ferrous equipment for food service hospitality projects (Online buying & selling equipment)",
             "tableRows": [
                 {
                     "tableHeader": "Phone",
                     "tableValue": "+91- 9650465689"
                 },{
                     "tableHeader": "Mail ID",
-                    "tableValue": "shivir@steeldesigntech.com"
+                    "tableValue": "shivir@steeldesigntech.com steeldesigntechnologies@gmail.com"
                 },{
                     "tableHeader": "Web address",
                     "tableValue": "www.steeldesigntech.com"

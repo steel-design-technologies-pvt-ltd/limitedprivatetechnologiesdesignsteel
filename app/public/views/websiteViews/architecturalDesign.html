@@ -1,24 +1,27 @@
-<h1 class="text-center page-heading">{{ADStaticData.pageHeading}}</h1>
+<h2 class="text-center page-heading">{{ADStaticData.pageHeading}}</h2>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<div class="mepDescription">
-		<h2 class="text-center">{{ADStaticData.civilSectionHeading}}</h2>
-		<h3 class="text-center">{{ADStaticData.civilSubHeading}}</h3>
 		<div class="col-lg-6 col-md-6 left-imp-points">
-			<ul>
+				<div class="action-button">
+						<button class="btn btn-architectural" data-toggle="modal" data-target="#architecturalPlanning">{{ADStaticData.buttonLabel}}</button>
+					</div>
+			<h2>Working Guidelines</h2>
+			<ol>
 				<li ng-repeat="item in ADStaticData.civilDesciption">{{item}}</li>
-			</ul>
+			</ol>
+			<ol type="1" start="8">
+					<li ng-repeat="item in ADStaticData.civilWorkingGuideline">{{item}}</li>
+				</ol>
 		</div>
 		<div class="col-lg-6 col-md-6 working-guidlines">
-			<h3>Working Guidelines</h3>
-			<ol>
-				<li ng-repeat="item in ADStaticData.civilWorkingGuideline">{{item}}</li>
-			</ol>
+			<cl-image public-id="architectural-planning/{{ADStaticData.cloudinaryImagePaths.rightImg}}.jpg" ></cl-image>
 		</div>
 	</div>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 action-button">
-	<button class="btn btn-architectural" data-toggle="modal" data-target="#architecturalPlanning">{{ADStaticData.buttonLabel}}</button>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 layout-img">
+	<cl-image public-id="architectural-planning/{{ADStaticData.cloudinaryImagePaths.leftImg}}.jpg" ></cl-image>
 </div>
+
 <request-design class="modal fade" id="architecturalPlanning" tabindex="-1" role="dialog" aria-labelledby="architecturalPlanningLabel"
     aria-hidden="true"></request-design>
 <div class="col-lg-12 col-md-12 col-sm-12">

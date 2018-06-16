@@ -1,6 +1,6 @@
 (function(){
     var appModule = angular.module('appModule',['ui.router', 'ngFileUpload', 'cloudinary', 'angular-growl']);
-     appModule.config(['$stateProvider', 'CloudinaryProvider', function ($stateProvider, CloudinaryProvider, growl) {
+     appModule.config(['$stateProvider', '$urlRouterProvider', 'CloudinaryProvider', function ($stateProvider, $urlRouterProvider, CloudinaryProvider, growl) {
 
         CloudinaryProvider.configure({
             cloud_name: 'ddzmveje0',
@@ -94,7 +94,7 @@
         }
         var admin = {
             name: 'admin',
-            url: '/admin',        
+            url: '/technologies-sdt-admin-page',        
             templateUrl: 'views/adminViews/home.html',
             controller : 'adminMainController'
         }
@@ -120,7 +120,6 @@
             controller: 'updateProductController'
         };
 
-
         $stateProvider.state(websiteLayout);
         $stateProvider.state(landingPage);
         $stateProvider.state(equipments);
@@ -137,5 +136,7 @@
         $stateProvider.state(landing);
         $stateProvider.state(addProduct);
         $stateProvider.state(updateProduct);
+        $urlRouterProvider.when('', 'home');
+        $urlRouterProvider.otherwise('home');
     }]);
 })();
