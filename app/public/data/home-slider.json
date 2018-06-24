@@ -1,67 +1,50 @@
-[
-    {
-        "slideId": 0,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows the indo china buffet",
-        "slideHeading": "Indo-china Buffet",
-        "slideDescription": "Taste the spicy cuisine."
-    },
-    {
-        "slideId": 1,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows cafeteria planning top view",
-        "slideHeading": "Cafeteria Planning",
-        "slideDescription": "Architectural design of cafeteria/canteens"
-    },
-    {
-        "slideId": 2,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows non stop cooking layout",
-        "slideHeading": "Non-stop cooking",
-        "slideDescription": "Island view of kitchen planning"
-    },
-    {
-        "slideId": 3,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows traditional food equipment layout",
-        "slideHeading": "Traditional food service planning",
-        "slideDescription": "Indian Continental kitchen"
-    },
-    {
-        "slideId": 4,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows bar view",
-        "slideHeading": "Bar",
-        "slideDescription": "Spread the beauty of restaurant"
-    },
-    {
-        "slideId": 5,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows residence designs",
-        "slideHeading": "Residetial Architectural View",
-        "slideDescription": "Architectural design Residences"
-    },
-    {
-        "slideId": 6,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows south indian food",
-        "slideHeading": "South Indian",
-        "slideDescription": "Different tastes of South India"
-    },
-    {
-        "slideId": 7,
-        "dataTarget": "#myCarousel",
-        "imageUrl": "home-slider/carousel",
-        "imageAltText": "this image shows buld kitchen layout",
-        "slideHeading": "Bulk Kitchen",
-        "slideDescription": "Ideal for Cafeteria and Canteen food service"
-    }
-
-]
+[{
+    "slideId": 0,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows the indo china buffet",
+    "slideHeading": "Indo-china Buffet",
+    "slideDescription": "Taste the spicy cuisine."
+}, {
+    "slideId": 1,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows cafeteria planning top view",
+    "slideHeading": "Cafeteria Kitchen",
+    "slideDescription": "Architectural design of cafeteria/canteens"
+}, {
+    "slideId": 2,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows non stop cooking layout",
+    "slideHeading": "Non-stop cooking",
+    "slideDescription": "Island view of kitchen planning"
+}, {
+    "slideId": 3,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows traditional food equipment layout",
+    "slideHeading": "Bar",
+    "slideDescription": "Indian Continental kitchen"
+}, {
+    "slideId": 4,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows bar view",
+    "slideHeading": "Continental Kitchen",
+    "slideDescription": "Spread the beauty of restaurant"
+}, {
+    "slideId": 5,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows residence designs",
+    "slideHeading": "Bulk Cooking",
+    "slideDescription": "Architectural design Residences"
+}, {
+    "slideId": 6,
+    "dataTarget": "#myCarousel",
+    "imageUrl": "home-slider/carousel",
+    "imageAltText": "this image shows south indian food",
+    "slideHeading": "Kitchen and Bar Layout",
+    "slideDescription": "Different tastes of South India"
+}]
