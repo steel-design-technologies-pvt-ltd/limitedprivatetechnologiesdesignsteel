@@ -231,6 +231,36 @@ router.route('/designCommercialKitchen')
 /* ######################################  admin routes  ###########################################*/
 
 /*#######################################################
+	for viewing orders ====================
+#########################################################*/
+
+router.route('/admin/viewOrders')
+    .get(function (req, res) {
+        placeOrderSchema.find(function (err, placeOrderData) {
+            if (err)
+                res.send(err);
+            //console.log(placeOrderData);
+            res.json(placeOrderData);
+        });
+    });
+
+/*#######################################################
+	for deleting an order ====================
+#########################################################*/
+
+router.route('/admin/deleteAnOrder/:deleteId')
+    .delete(function (req, res) {
+        var id = req.params.deleteId;
+        console.log('delete order req',req.params.deleteId);
+        placeOrderSchema.remove({_id: id},function (err) {
+            if (err)
+                res.status(500).send();
+            //console.log(placeOrderData);
+            else
+            res.status(200).send();
+        });
+    });
+/*#######################################################
 	for adding a product to database ====================
 #########################################################*/
 router.route('/admin/addProductToDB')
