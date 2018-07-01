@@ -120,6 +120,14 @@
             controller: 'updateProductController'
         };
 
+        var viewOrders = {
+            name: 'admin.viewOrders',
+            url: '/viewOrders',
+            parent: 'admin',
+            templateUrl: 'views/adminViews/view-orders.html',
+            controller: 'viewOrdersController'
+        }
+
         $stateProvider.state(websiteLayout);
         $stateProvider.state(landingPage);
         $stateProvider.state(equipments);
@@ -136,6 +144,7 @@
         $stateProvider.state(landing);
         $stateProvider.state(addProduct);
         $stateProvider.state(updateProduct);
+        $stateProvider.state(viewOrders);
         $urlRouterProvider.when('', 'home');
         $urlRouterProvider.otherwise('home');
     }]);

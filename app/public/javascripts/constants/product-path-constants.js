@@ -9,6 +9,8 @@
         'ADD_PRODUCT_TO_DB': '/app/admin/addProductToDB',
         'PRODUCT_FOR_UPDATE': '/app/admin/productForUpdate',
         'UPDATE_PRODUCT': '/app/admin/updateProduct',
-        'UPDATE_PRODUCT_AVAILABILITY': '/app/updateProductAvailability'
+        'UPDATE_PRODUCT_AVAILABILITY': '/app/updateProductAvailability',
+        'ORDER_DETAILS': '/app/admin/viewOrders',
+        'DELETE_ORDER':'/app/admin/deleteAnOrder/:deleteId'
     });
 })();
