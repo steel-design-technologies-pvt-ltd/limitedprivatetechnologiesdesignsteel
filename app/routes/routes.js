@@ -203,9 +203,9 @@ router.route('/designCommercialKitchen')
             });
     });
 
-    router.route('/updateProductAvailability')
+router.route('/updateProductAvailability')
     .put(function (req, res) {
-        console.log('update product availability',req.body);
+        console.log('update product availability', req.body);
         // productSchema.findOneAndUpdate(req.body.productID, req.body, function (err, updateProductObject) {
         //     if(err)
         //         res.send(err);
@@ -216,11 +216,11 @@ router.route('/designCommercialKitchen')
         // });
         productSchema.update({
             productID: req.body.productID
-        },{
+        }, {
             productAvailability: 'sold'
         }, function (err, updateProductAvailability) {
-            if(err)
-            res.send(err);
+            if (err)
+                res.send(err);
             res.send({
                 status: 200,
                 soldProduct: updateProductAvailability
@@ -240,10 +240,63 @@ router.route('/admin/viewOrders')
             if (err)
                 res.send(err);
             //console.log(placeOrderData);
-            res.json(placeOrderData);
+            res.status(200).json(placeOrderData);
         });
     });
 
+/*#######################################################
+	for viewing sell equipment request ====================
+#########################################################*/
+
+router.route('/admin/viewSellingEquipmentRequest')
+    .get(function (req, res) {
+        sellEquipmentSchema.find(function (err, sellingRequests) {
+            if (err)
+                res.send(err);
+            //console.log(sellingRequests);
+            res.status(200).json(sellingRequests);
+        });
+    });
+/*#######################################################
+	for viewing design equipment request ====================
+#########################################################*/
+
+router.route('/admin/viewDesignEquipmentRequest')
+    .get(function (req, res) {
+        designEquipmentSchema.find(function (err, designEquipmentRequests) {
+            if (err)
+                res.send(err);
+            //console.log(designEquipmentRequests);
+            res.status(200).json(designEquipmentRequests);
+        });
+    });
+/*#######################################################
+	for viewing architectural planning request ====================
+#########################################################*/
+
+router.route('/admin/viewArchPlanningRequest')
+    .get(function (req, res) {
+        designArchitecturalAreaSchema.find(function (err, archPlanningRequest) {
+            if (err)
+                res.send(err);
+            //console.log(archPlanningRequest);
+            res.status(200).json(archPlanningRequest);
+        });
+    });
+
+/*#######################################################
+	for viewing design modular kitchen request ====================
+#########################################################*/
+
+router.route('/admin/viewModularKitchenRequest')
+    .get(function (req, res) {
+        designCommercialKitchenSchema.find(function (err, modularKitchenRequest) {
+            if (err)
+                res.send(err);
+            //console.log(modularKitchenRequest);
+            res.status(200).json(modularKitchenRequest);
+        });
+    });
 /*#######################################################
 	for deleting an order ====================
 #########################################################*/
@@ -251,13 +304,15 @@ router.route('/admin/viewOrders')
 router.route('/admin/deleteAnOrder/:deleteId')
     .delete(function (req, res) {
         var id = req.params.deleteId;
-        console.log('delete order req',req.params.deleteId);
-        placeOrderSchema.remove({_id: id},function (err) {
+        console.log('delete order req', req.params.deleteId);
+        placeOrderSchema.remove({
+            _id: id
+        }, function (err) {
             if (err)
                 res.status(500).send();
             //console.log(placeOrderData);
             else
-            res.status(200).send();
+                res.status(200).send();
         });
     });
 /*#######################################################
@@ -267,37 +322,39 @@ router.route('/admin/addProductToDB')
     .post(function (req, res) {
         console.log('Post - addProduct object', req.body);
         productSchema.create({
-            name: req.body.name,
-            productImageURL : req.body.productImageURL,
-            productID: req.body.productID,
-            productCode: req.body.productCode,
-            length: req.body.length,
-            width: req.body.width,
-            height: req.body.height,
-            built_material: req.body.buildMaterial,
-            application: req.body.applications,
-            construction_details: req.body.construction_details,
-            productPrice : req.body.productPrice,
-            vendorID: req.body.vendorID,
-            productAvailability: '',
-            availabilityType: 'F',
-            isProductSold: false,
-            quantity: req.body.quantity,
-            warranty: req.body.warranty,
-            rating: req.body.rating,
-            deliveryTime: req.body.deliveryTime,
-            paymentMode: req.body.paymentMode,
-            special_req: req.body.special_req
+                name: req.body.name,
+                productImageURL: req.body.productImageURL,
+                productID: req.body.productID,
+                productCode: req.body.productCode,
+                length: req.body.length,
+                width: req.body.width,
+                height: req.body.height,
+                built_material: req.body.buildMaterial,
+                application: req.body.applications,
+                construction_details: req.body.construction_details,
+                productPrice: req.body.productPrice,
+                vendorID: req.body.vendorID,
+                productAvailability: '',
+                availabilityType: 'F',
+                isProductSold: false,
+                quantity: req.body.quantity,
+                warranty: req.body.warranty,
+                rating: req.body.rating,
+                deliveryTime: req.body.deliveryTime,
+                paymentMode: req.body.paymentMode,
+                special_req: req.body.special_req
             },
             function (err, product) { // this function does the additional thing after adding product
-                if (err)
-                    res.send(err);
-                console.log('product added successfully');
-                productSchema.find(function (err, products) {
-                    if (err)
-                        res.send(err);
-                    res.json(products); // send all the products available in database
-                });
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                    console.log('product added successfully');
+                    productSchema.find(function (err, products) {
+                        if (err)
+                            res.send(err);
+                        res.json(products); // send all the products available in database
+                    });
+                }
             });
     });
 
@@ -308,8 +365,10 @@ router.route('/admin/addProductToDB')
 
 router.route('/admin/productForUpdate')
     .post(function (req, res) {
-        productSchema.find({productID: req.body.productID}, function (err, outputProduct) {
-            if(err){
+        productSchema.find({
+            productID: req.body.productID
+        }, function (err, outputProduct) {
+            if (err) {
                 res.send(err);
             }
             res.json(outputProduct);
@@ -320,16 +379,18 @@ router.route('/admin/updateProduct')
     .put(function (req, res) {
         console.log(req.body);
         productSchema.findOneAndUpdate(req.body.productID, req.body, function (err, updateProductObject) {
-            if(err)
-                res.send(err);
-            res.send({
-                status:200,
-                updatedProduct: updateProductObject
-            });
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.send({
+                    status: 200,
+                    updatedProduct: updateProductObject
+                });
+            }
         });
     });
 
-    /*###################################################################################
+/*###################################################################################
     for deleting logo from database and emptying logo directory ====================
 #####################################################################################*/
 

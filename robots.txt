@@ -1,0 +1,5 @@
+# robots.txt for http://www.steeldesigntech.com
+
+# global
+User-agent: *
+Allow: /sitemap.xml

@@ -1,0 +1,37 @@
+<h1>All Design equipment requests received</h1>
+<div class="panel-group">
+  <div class="panel panel-default" ng-repeat="order in designEquipmentOrders">
+      <div class="panel-heading">
+        <big>
+          <b>Request Id : {{order.usermail}}</b>
+        </big>
+      </div>
+      <div class="panel-body">
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <td>Requestor Name</td>
+              <td>{{order.username}}</td>
+            </tr>
+            <tr>
+              <td>Contact Number</td>
+              <td>{{order.userContact}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b> Product Description-</b>
+                    <p>{{order.productDescription}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Eqiupment Name</td>
+                <td>{{order.equipmentName}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-danger">Delete This Order</button>
+      </div>
+    </div>
+</div>
