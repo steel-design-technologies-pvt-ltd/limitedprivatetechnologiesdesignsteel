@@ -11,6 +11,10 @@
         'UPDATE_PRODUCT': '/app/admin/updateProduct',
         'UPDATE_PRODUCT_AVAILABILITY': '/app/updateProductAvailability',
         'ORDER_DETAILS': '/app/admin/viewOrders',
+        'SELL_EQUIPMENT_ORDER': '/app/admin/viewSellingEquipmentRequest',
+        'DESIGN_EQUIPMENT_ORDERS':'/app/admin/viewDesignEquipmentRequest',
+        'ARCHI_MEP_ORDERS':'/app/admin/viewArchPlanningRequest',
+        'MODULAR_KITCHEN_ORDERS':'/app/admin/viewModularKitchenRequest',
         'DELETE_ORDER':'/app/admin/deleteAnOrder/:deleteId'
     });
 })();

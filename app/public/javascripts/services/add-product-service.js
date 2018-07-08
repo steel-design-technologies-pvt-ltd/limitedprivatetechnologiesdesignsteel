@@ -8,7 +8,11 @@
 
 		function addProductToDb(productData){
 			console.log(productPathConstants.ADD_PRODUCT_TO_DB);
-			return $http.post(productPathConstants.ADD_PRODUCT_TO_DB ,productData);
+			try{
+				return $http.post(productPathConstants.ADD_PRODUCT_TO_DB ,productData);
+			} catch (error) {
+				console.log(error);
+			}
 		};
 		function imageUploader(productPicFile){
 			return $http.post('/app/admin/addProduct/productImage' ,productPicFile,{

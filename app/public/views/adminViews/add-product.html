@@ -1,4 +1,4 @@
-<form class="form-horizontal add-product-form">
+<form class="form-horizontal add-product-form" name="addProductForm">
     <!-- product heading -->
     <h1 class="text-center">Product Description</h1>
     <!-- product image to be uploaded -->
@@ -14,80 +14,101 @@
     <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
         <div class="addProductContainer">
             <div class="form-group">
-                <label class="control-label" for="productName">Product Name:</label>
-                <input type="text" class="form-control" id="productName" placeholder="Enter Product Name" ng-model="product.name">
+                <label class="control-label" for="productName">Product Name *:</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                id="productName" 
+                placeholder="Enter Product Name" 
+                ng-model="product.name" required>
+                <span ng-style="product.name.length < 3? {'color':'red'}:{'color':'black'}" ng-if="product.name.length < 3">This field should have the name of the product (alphanumeric)</span>
             </div>
             <div class="form-group">
-                <label class="control-label" for="product_price">Product Price</label>
-                <input type="text" class="form-control" id="product_price" placeholder="Enter Product Price" ng-model="product.productPrice">
+                <label class="control-label" for="product_price">Product Price *</label>
+                <input type="text" class="form-control" id="product_price" placeholder="Enter Product Price" ng-model="product.productPrice" required>
+                <span ng-style="product.productPrice.length < 2 ? {'color':'red'}:{'color':'black'}" ng-show="product.productPrice.length < 2">This field is mandatory and expects price in Integers (e.g: 12000)</span>
             </div>
             <div class="form-group">
-                <label class="control-label" for="product_ID">Product ID</label>
-                <input type="text" class="form-control" id="product_ID" placeholder="Enter Product ID number" ng-model="product.productID">
+                <label class="control-label" for="product_ID">Product ID *</label>
+                <input type="text" class="form-control" id="product_ID" placeholder="Enter Product ID number" ng-model="product.productID" required>
+                <span ng-style="product.productID.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.productID.length < 3">Please give this field an ID (alphanumeric) </span>
             </div>
             <div class="form-group">
-                <label class="control-label" for="product_code">Product Code</label>
-                <input type="text" class="form-control" id="product_code" placeholder="Enter product Code" ng-model="product.productCode">
+                <label class="control-label" for="product_code">Product Code *</label>
+                <input type="text" class="form-control" id="product_code" placeholder="Enter product Code" ng-model="product.productCode" required>
+                <span ng-style="product.productCode.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.productCode.length < 3">Please provide a product code (Alphanumeric) </span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="vendorID">Enter Vendor ID it belongs to</label>
-                <input type="text" class="form-control" id="vendorID" placeholder="Enter Vendor ID" ng-model="product.vendorID">
+                <input type="text" class="form-control" id="vendorID" placeholder="Enter Vendor ID" ng-model="product.vendorID" required>
+                <span ng-style="product.vendorID.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.vendorID.length < 3">Please provide a Vendor Id (Alphanumeric) </span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="availabilityType">Product Availability Type</label>
-                <input type="text" class="form-control" id="availabilityType" placeholder="Enter Product Availability Type" ng-model="product.availabilityType">
+                <input type="text" class="form-control" id="availabilityType" placeholder="Enter Product Availability Type" ng-model="product.availabilityType" required>
+                <span ng-style="product.availabilityType.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.availabilityType.length < 3">Please provide product availability(Alphanumeric) </span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="">Enter Dimensions of product</label>
                 <div class="productDimension">
-                    <input type="text" class="form-control" id="productLength" placeholder="Enter Product length" ng-model="product.length">
+                    <input type="text" class="form-control" id="productLength" placeholder="Enter Product length" ng-model="product.length" required>
+                    <span ng-style="product.length.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.length.length < 3">Please provide a product dimension number only (e.g 1200) </span>
                 </div>
                 <div class="productDimension">
-                    <input type="text" class="form-control" id="productWidth" placeholder="Enter Product width" ng-model="product.width">
+                    <input type="text" class="form-control" id="productWidth" placeholder="Enter Product width" ng-model="product.width" required>
+                    <span ng-style="product.width.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.width.length < 3">Please provide a product dimension number only (e.g 1200) </span>
                 </div>
                 <div class="productDimension">
-                    <input type="text" class="form-control" id="productHeight" placeholder="Enter Product height" ng-model="product.height">
+                    <input type="text" class="form-control" id="productHeight" placeholder="Enter Product height" ng-model="product.height" required>
+                    <span ng-style="product.height.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.height.length < 3">Please provide a product dimension number only (e.g 1200) </span>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="buildMaterial">Enter Product Built Material</label>
-                <input type="text" class="form-control" id="buildMaterial" placeholder="Enter Product Material Type" ng-model="product.buildMaterial">
+                <input type="text" class="form-control" id="buildMaterial" placeholder="Enter Product Material Type" ng-model="product.buildMaterial" required>
+                <span ng-style="product.buildMaterial.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.buildMaterial.length < 3">Please provide product construction detail type </span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productApplications">Enter Product Applications</label>
-                <input type="text" class="form-control" id="productApplications" placeholder="Enter Product applications" ng-model="product.applications">
+                <input type="text" class="form-control" id="productApplications" placeholder="Enter Product applications" ng-model="product.applications" required>
+                <span ng-style="product.applications.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.applications.length < 3">Please provide product application detail type</span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="constructionDetails">Enter Product Construction details</label>
-                <textarea type="text" class="form-control" id="constructionDetails" placeholder="Enter Product Constuction Details with @ separated text" ng-model="product.construction_details"></textarea>
+                <textarea type="text" class="form-control" id="constructionDetails" placeholder="Enter Product Constuction Details with @ separated text" ng-model="product.construction_details" required></textarea>
+                <span ng-style="product.construction_details.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.construction_details.length < 3">Please provide product construction detail type, each line should be @separated (e.g: if you want to add 3 lines then sample input should be like '@line1@line2@line3')</span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productQuantity">Enter Product Quantity</label>
-                <input type="text" class="form-control" id="productQuantity" placeholder="Enter Product quantity in number" ng-model="product.quantity">
+                <input type="text" class="form-control" id="productQuantity" placeholder="Enter Product quantity in number" ng-model="product.quantity" required>
+                <span ng-style="product.quantity.length > 1 ? {'color':'red'}:{'color':'black'}" ng-show="product.quantity.length > 1">The product quantity should be one digit only i.e 1 only</span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productWarranty">Enter Product Warranty</label>
-                <input type="text" class="form-control" id="productWarranty" placeholder="Enter Product warranty in Months" ng-model="product.warranty">
+                <input type="text" class="form-control" id="productWarranty" placeholder="Enter Product warranty in Months" ng-model="product.warranty" required>
+                <span ng-style="product.warranty.length > 1 ? {'color':'red'}:{'color':'black'}" ng-show="product.warranty.length > 1">The product warranty should be entered in Integer only which represent month (e.g: 12) </span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productRating">Enter Product Rating</label>
-                <input type="text" class="form-control" id="productRating" placeholder="Enter Product Rating in number" ng-model="product.rating">
+                <input type="text" class="form-control" id="productRating" placeholder="Enter Product Rating in number" ng-model="product.rating" required>
             </div>
             <div class="form-group">
                 <label class="control-label" for="deliverytDate">Expected Delivery of the product</label>
-                <input type="text" class="form-control" id="deliverytDate" placeholder="Enter Product delivery time" ng-model="product.deliveryTime">
+                <input type="text" class="form-control" id="deliverytDate" placeholder="Enter Product delivery time" ng-model="product.deliveryTime" required>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productPaymentMethod">Enter Payment Method for product</label>
-                <input type="text" class="form-control" id="productPaymentMethod" placeholder="Enter Product Payment method" ng-model="product.paymentMode">
+                <input type="text" class="form-control" id="productPaymentMethod" placeholder="Enter Product Payment method" ng-model="product.paymentMode" required>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productPaymentMethod">Special Requirement</label>
-                <input type="text" class="form-control" id="productPaymentMethod" placeholder="Enter special requirements for the product @ separated values" ng-model="product.special_req">
+                <input type="text" class="form-control" id="productPaymentMethod" placeholder="Enter special requirements for the product @ separated values" ng-model="product.special_req" required>
+                <span ng-style="product.special_req.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.special_req.length < 3">Please provide product special requirement detail, each line should be @separated (e.g: if you want to add 3 lines then sample input should be like '@line1@line2@line3') starting with @</span>
             </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-default" ng-click="addProduct(product)">Add Product</button>
-            </div>
+            
         </div>
     </div>
 </form>
+<div class="section">
+    <button type="submit" class="btn btn-default" ng-click="addProduct(product)" ng-disabled="addProductForm.$invalid">Add Product</button>
+</div>

@@ -1,7 +1,7 @@
 (function(){
     var appModule = angular.module('appModule');
     appModule.constant('designEquipmentConstants',{
-        "designpageHeader": "Design Your Equipment @just 100 Rs. with free quote",
+        "designpageHeader": "Design Your Equipment just @Rs.100 with free quote",
         "designEquipmentLeft": {
             "labelName" : "For Commercial Kitchen",
             "textContent": "Hotel, Restaurant, Bar, Dhaba, Bakery, Canteen, Cafeteria, Take-away point, Food van"

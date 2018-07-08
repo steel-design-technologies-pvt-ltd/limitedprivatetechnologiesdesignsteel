@@ -126,7 +126,39 @@
             parent: 'admin',
             templateUrl: 'views/adminViews/view-orders.html',
             controller: 'viewOrdersController'
-        }
+        };
+
+        var viewSellingEquipmentOrders = {
+            name: 'admin.viewSellingEquipmentOrders',
+            url: '/sellingEquipmentOrders',
+            parent: 'admin',
+            templateUrl: 'views/adminViews/view-selling-equipment-request.html',
+            controller: 'sellingEquipmentController'
+        };
+
+        var viewDesignEquipmentOrders = {
+            name: 'admin.viewDesignEquipmentOrders',
+            url: '/designEquipmentOrders',
+            parent: 'admin',
+            templateUrl: 'views/adminViews/view-design-equipment-request.html',
+            controller: 'designEquipmentRequestController'
+        };
+
+        var viewArchDesignOrders = {
+            name: 'admin.viewArchDesignOrders',
+            url: '/archDesignOrders',
+            parent: 'admin',
+            templateUrl: 'views/adminViews/view-arch-planning-request.html',
+            controller: 'archDesignRequestController'
+        };
+
+        var viewModularKitchenOrders = {
+            name: 'admin.viewModularKitchenOrders',
+            url: '/modularKitchenOrders',
+            parent: 'admin',
+            templateUrl: 'views/adminViews/view-modular-kichen-request.html',
+            controller: 'modularKitchenOrdersController'
+        };
 
         $stateProvider.state(websiteLayout);
         $stateProvider.state(landingPage);
@@ -145,6 +177,10 @@
         $stateProvider.state(addProduct);
         $stateProvider.state(updateProduct);
         $stateProvider.state(viewOrders);
+        $stateProvider.state(viewSellingEquipmentOrders);
+        $stateProvider.state(viewDesignEquipmentOrders);
+        $stateProvider.state(viewModularKitchenOrders);
+        $stateProvider.state(viewArchDesignOrders);
         $urlRouterProvider.when('', 'home');
         $urlRouterProvider.otherwise('home');
     }]);
