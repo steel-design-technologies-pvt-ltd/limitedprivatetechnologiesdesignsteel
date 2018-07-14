@@ -326,9 +326,7 @@ router.route('/admin/addProductToDB')
                 productImageURL: req.body.productImageURL,
                 productID: req.body.productID,
                 productCode: req.body.productCode,
-                length: req.body.length,
-                width: req.body.width,
-                height: req.body.height,
+                dimension: req.body.dimension,
                 built_material: req.body.buildMaterial,
                 application: req.body.applications,
                 construction_details: req.body.construction_details,
@@ -378,7 +376,7 @@ router.route('/admin/productForUpdate')
 router.route('/admin/updateProduct')
     .put(function (req, res) {
         console.log(req.body);
-        productSchema.findOneAndUpdate(req.body.productID, req.body, function (err, updateProductObject) {
+        productSchema.findOneAndUpdate({'productID':req.body.productID}, req.body, {upsert:true}, function (err, updateProductObject) {
             if (err) {
                 res.status(500).send(err);
             } else {

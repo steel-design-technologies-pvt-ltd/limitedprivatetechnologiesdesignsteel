@@ -2,7 +2,7 @@
     var appModule = angular.module('appModule');
     appModule.controller('updateProductController', ['$scope', 'updateProductService', function ($scope, updateProductService) {
         console.log('update product controller');
-
+        var referenceObj = {};
         $scope.getProductToUpdate = function (data) {
             updateProductService.getProductToUpdate(data).then(function (response) {
                 if (response.data.length === 1) {
@@ -25,9 +25,7 @@
                         productCode: response.data[0].productCode,
                         vendorID: response.data[0].vendorID,
                         availabilityType: response.data[0].availabilityType,
-                        length: response.data[0].length,
-                        width: response.data[0].width,
-                        height: response.data[0].height,
+                        dimension: response.data[0].dimension,
                         built_material: response.data[0].built_material,
                         application: response.data[0].application,
                         construction_details: response.data[0].construction_details,
@@ -38,6 +36,7 @@
                         paymentMode: response.data[0].paymentMode,
                         special_req: response.data[0].special_req
                     };
+                    referenceObj = JSON.parse(JSON.stringify($scope.updatedProduct));
                 }
             }, function (response) {
                 console.log('failed response', response);
@@ -46,8 +45,7 @@
 
         $scope.updateThisProduct = function (data) {
             console.log(data);
-            var preObj = $scope.updatedProduct;
-            if (!checkIfproductUpdated(data, preObj)) {
+            if (!checkIfproductUpdated(data, referenceObj)) {
                 var contructionDetailStr = data.construction_details.split('@');
                 var sp_req = data.special_req.split('@');
                 data.special_req = sp_req;
@@ -70,9 +68,7 @@
                 newObj['productCode'] === preObj['productCode'] &&
                 newObj['vendorID'] === preObj['vendorID'] &&
                 newObj['availabilityType'] === preObj['availabilityType'] &&
-                newObj['length'] === preObj['length'] &&
-                newObj['width'] === preObj['width'] &&
-                newObj['height'] === preObj['height'] &&
+                newObj['dimension'] === preObj['dimension'] &&
                 newObj['built_material'] === preObj['built_material'] &&
                 newObj['application'] === preObj['application'] &&
                 newObj['construction_details'] === preObj['construction_details'] &&

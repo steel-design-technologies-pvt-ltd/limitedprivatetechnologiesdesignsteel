@@ -51,17 +51,17 @@
             <div class="form-group">
                 <label class="control-label" for="">Enter Dimensions of product</label>
                 <div class="productDimension">
-                    <input type="text" class="form-control" id="productLength" placeholder="Enter Product length" ng-model="product.length" required>
-                    <span ng-style="product.length.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.length.length < 3">Please provide a product dimension number only (e.g 1200) </span>
+                    <input type="text" class="form-control" id="productLength" placeholder="Enter Product Dimension" ng-model="product.dimension" required>
+                    <span ng-style="product.dimension.length < 1 ? {'color':'red'}:{'color':'black'}" ng-show="product.dimension.length < 3">Product dimension required (text format)</span>
                 </div>
-                <div class="productDimension">
+                <!-- <div class="productDimension">
                     <input type="text" class="form-control" id="productWidth" placeholder="Enter Product width" ng-model="product.width" required>
                     <span ng-style="product.width.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.width.length < 3">Please provide a product dimension number only (e.g 1200) </span>
                 </div>
                 <div class="productDimension">
                     <input type="text" class="form-control" id="productHeight" placeholder="Enter Product height" ng-model="product.height" required>
                     <span ng-style="product.height.length < 3 ? {'color':'red'}:{'color':'black'}" ng-show="product.height.length < 3">Please provide a product dimension number only (e.g 1200) </span>
-                </div>
+                </div> -->
             </div>
             <div class="form-group">
                 <label class="control-label" for="buildMaterial">Enter Product Built Material</label>
@@ -86,7 +86,7 @@
             <div class="form-group">
                 <label class="control-label" for="productWarranty">Enter Product Warranty</label>
                 <input type="text" class="form-control" id="productWarranty" placeholder="Enter Product warranty in Months" ng-model="product.warranty" required>
-                <span ng-style="product.warranty.length > 1 ? {'color':'red'}:{'color':'black'}" ng-show="product.warranty.length > 1">The product warranty should be entered in Integer only which represent month (e.g: 12) </span>
+                <span ng-style="product.warranty.length < 1 ? {'color':'red'}:{'color':'black'}" ng-show="product.warranty.length < 1">The product warranty should be entered in Integer only which represent month (e.g: 12) </span>
             </div>
             <div class="form-group">
                 <label class="control-label" for="productRating">Enter Product Rating</label>

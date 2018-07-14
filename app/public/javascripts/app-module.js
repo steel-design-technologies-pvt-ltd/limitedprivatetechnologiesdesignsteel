@@ -159,7 +159,6 @@
             templateUrl: 'views/adminViews/view-modular-kichen-request.html',
             controller: 'modularKitchenOrdersController'
         };
-
         $stateProvider.state(websiteLayout);
         $stateProvider.state(landingPage);
         $stateProvider.state(equipments);
