@@ -11,7 +11,7 @@
                     "tableValue": "+91- 9650465689"
                 },{
                     "tableHeader": "Mail ID",
-                    "tableValue": "shivir@steeldesigntech.com steeldesigntechnologies@gmail.com"
+                    "tableValue": "steeldesigntechnologies@gmail.com"
                 },{
                     "tableHeader": "Web address",
                     "tableValue": "www.steeldesigntech.com"
