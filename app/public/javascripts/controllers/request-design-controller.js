@@ -37,10 +37,6 @@
                     growl.error(errorConstants.ARCH_DESIGN.ERROR.DESCRIPTION ,{title: errorConstants.TITLE});
                 });
             } else if($scope.requestDesignType==='commercialKitchen'){
-                if($scope.requestDesign.planningKitchenName.length<3){
-                    growl.error('The form filled has some invalid values, please correct them to proceed' ,{title: errorConstants.TITLE});
-                    return null;
-                }
                 requestDesignService.requestDesignData(appConstants.REQUEST_KITCHEN_DESIGN, data).then(function (response){
                     console.log(response);
                     $scope.requestDesign = null;

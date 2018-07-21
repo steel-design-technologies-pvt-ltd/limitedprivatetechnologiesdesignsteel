@@ -15,7 +15,7 @@
             "navtext": "Design Equipment",
             "navLink": "designEquipment"
         },{
-            "navtext": "Design Kitchen/MEP Service",
+            "navtext": "Design Chef Kitchen",
             "navLink": "architecturalDesign"
         },{
             "navtext": "Design Modular Kitchen",

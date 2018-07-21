@@ -80,6 +80,7 @@ footer{background: #b9b9b9;padding: 1em 0;padding-bottom: 0}
 .social-connect{text-align: center;margin-bottom: 1em}
 .social-connect ul{font-size: 1.5em;text-align: center;border:none;color: rgb(255,255,255);}
 .social-connect ul > li{margin:0 1em 0;display:inline-block;float:none;cursor: pointer;}
+.social-connect ul > li > a:hover{background: transparent;border:1px solid transparent}
 .fa{    display: inline-block;padding: .5em 0;cursor: pointer;border-radius: 5px;color: black;font-size: 30px;}
 .footer-navigation-links ul{font-size: 1em;text-align: center;border:none;color: rgb(255,255,255);}
 .footer-navigation-links ul > li{margin:0 .2em 0;display:inline-block;float:none;cursor: pointer}
@@ -92,7 +93,7 @@ footer{background: #b9b9b9;padding: 1em 0;padding-bottom: 0}
 .category-products .product{padding: 15px;border: 1px solid transparent}
 .category-products .product:hover{border:1px solid #e1e1e1;box-shadow: 0 0 10px 1px rgba(0,0,0,.1);}
 .category-products .product .btn-desc{border-top:1px solid #e1e1e1;background-color: #d89209;border-radius:0;font-size:18px;padding:10px 0}
-.category-products .prod_img_con img{width: 100%}
+.category-products .prod_img_con img{width: 100%;max-height: 238px}
 
 /*for product-description-view*/
 .product-description-view{padding: 15px}

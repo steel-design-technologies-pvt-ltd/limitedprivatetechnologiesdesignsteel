@@ -5,8 +5,6 @@ var designCommercialKitchenSchema = mongoose.Schema({
     username: {type:String, required: true},
     userContact: {type: String, required: true},
     productDescription: {type: String, required: true},
-    planningKitchenName: {type: String, required: true},
-    menuServed: {type: String, required: true},
     kitchenAreaDimension: {type: String, required: true}
 },{
     collection: 'designCommercialKitchen'
