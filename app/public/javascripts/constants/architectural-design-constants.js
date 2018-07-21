@@ -1,10 +1,10 @@
 (function(){
     var appModule = angular.module('appModule');
     appModule.constant('architecturalDesignConstants',{
-        "pageHeading": "Design your commercial Kitchen/food service projects Architectural layout with equipment planning just @Rs.25/sq.feet",
+        "pageHeading": "\"\"You suggest, We plan your commercial kitchen just @ Rs. 25/sq.feet",
         "cloudinaryImagePaths": {
             "leftImg": "kitchen-bar-archPlan",
-            "rightImg": "canteen-archPlan"
+            "rightImg": "sdt_2"
         },
         "civilDesciption": [
             "Proper Architect designs for Food Service projects.",

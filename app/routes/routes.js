@@ -73,10 +73,12 @@ router.route('/websiteViews/getLogoData')
 router.route('/allProducts')
     .get(function (req, res) {
         productSchema.find(function (err, productData) {
-            if (err)
+            if (err){
                 res.send(err);
-            //console.log(productData);
-            res.json(productData);
+            } else {
+                console.log(productData);
+                res.json(productData);
+            }
         });
     });
 
@@ -98,10 +100,14 @@ router.route('/getProductDetails')
         productSchema.find({
             productID: req.query.id
         }, function (err, productDetails) {
-            if (err)
+            if (err){
                 res.send(err);
-            console.log(productDetails);
-            res.json(productDetails);
+            } else {
+                console.log(productDetails);
+                res.status(200).json(productDetails);
+            }
+                
+            
         });
     });
 
@@ -115,11 +121,12 @@ router.route('/placeUserOrder')
                 productPrice: req.body.productPrice
             },
             function (err, placedOrder) { // this function does the additional thing after placing order
-                if (err)
+                if (err){
                     res.send(err);
-                console.log('order Placed successfully');
+                }else {
+                    console.log('order Placed successfully');
                 res.status(200).send('order Placed successfully');
-
+                }
             });
     });
 
@@ -133,11 +140,12 @@ router.route('/sellEquipment')
                 productDescription: req.body.productDescription
             },
             function (err, sellEquipmentComplete) { // this function does the additional thing after placing order
-                if (err)
+                if (err){
                     res.send(err);
-                console.log('details saved successfully');
-                res.status(200).send('details saved successfully');
-
+                } else {
+                    console.log('details saved successfully');
+                    res.status(200).send('details saved successfully');
+                }
             });
     });
 
@@ -154,10 +162,12 @@ router.route('/designEquipment')
                 equipmentDimenstion: req.body.equipmentDimenstion
             },
             function (err, designEquipmentComplete) { // this function does the additional thing after placing order
-                if (err)
+                if (err){
                     res.send(err);
-                console.log('details saved successfully');
-                res.status(200).send('details saved successfully');
+                } else {
+                    console.log('details saved successfully');
+                    res.status(200).send('details saved successfully');
+                }
 
             });
     });
@@ -174,11 +184,10 @@ router.route('/designArchitecturalArea')
                 areaDimension: req.body.areaDimension
             },
             function (err, designArchitecturalComplete) { // this function does the additional thing after saving design architecturalArea
-                if (err)
-                    res.send(err);
-                console.log('details saved successfully');
-                res.status(200).send('details saved successfully');
-
+                if (err){res.send(err);} else {
+                    console.log('details saved successfully');
+                    res.status(200).send('details saved successfully');
+                }
             });
     });
 
@@ -190,16 +199,13 @@ router.route('/designCommercialKitchen')
                 usermail: req.body.usermail,
                 userContact: req.body.userContact,
                 productDescription: req.body.productDescription,
-                planningKitchenName: req.body.planningKitchenName,
-                menuServed: req.body.menuServed,
                 kitchenAreaDimension: req.body.kitchenAreaDimension
             },
             function (err, designCommercialKitchen) { // this function does the additional thing after designCommercialKitchen
-                if (err)
-                    res.send(err);
-                console.log('details saved successfully');
+                if (err){res.send(err);} else {
+                    console.log('details saved successfully');
                 res.status(200).send('details saved successfully');
-
+                }
             });
     });
 
