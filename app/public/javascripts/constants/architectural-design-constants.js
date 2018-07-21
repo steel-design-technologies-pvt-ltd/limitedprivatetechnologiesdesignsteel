@@ -1,7 +1,7 @@
 (function(){
     var appModule = angular.module('appModule');
     appModule.constant('architecturalDesignConstants',{
-        "pageHeading": "\"\"You suggest, We plan your commercial kitchen just @ Rs. 25/sq.feet",
+        "pageHeading": "\"You suggest, We plan your commercial kitchen just @ Rs. 25/sq.feet\"",
         "cloudinaryImagePaths": {
             "leftImg": "kitchen-bar-archPlan",
             "rightImg": "sdt_2"
