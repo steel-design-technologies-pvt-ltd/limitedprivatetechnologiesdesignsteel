@@ -1,7 +1,7 @@
 (function(){
     var appModule = angular.module('appModule');
     appModule.constant('homeConstants',{
-        "websiteMotto": "Online food service and hospitality equipment trading. Development of new ferrous and stainless steel equipment, commercial and residential kitchen layout and facility planning.",
+        "websiteMotto": "SDT SteelDesign Pvt. Ltd. provides online food service and hospitality equipment trading. Development of new ferrous and stainless steel equipment, commercial and residential kitchen layout and facility planning.",
         
         "companyPromise": [{
             "promiseHeading": "Our Promise",
