@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nohup node ./bin/www &"
+    "start": "node ./bin/www &"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -19,5 +19,10 @@
     "multer": "^1.2.1",
     "path": "^0.12.7",
     "sendgrid": "^4.7.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
   }
 }

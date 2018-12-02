@@ -52,7 +52,7 @@
 
 		function deleteAnOrder (data) {
 			try{
-				return $http.delete(productPathConstants.DELETE_ORDER+data._id);
+				return $http.delete(productPathConstants.DELETE_ORDER, data);
 			} catch (err) {
 				console.log('unable to delete this order');
 			}

@@ -25,6 +25,11 @@
             <input type="text" class="form-control" id="product_price" placeholder="Enter Product Price" ng-model="updatedProduct.productPrice">
         </div>
         <div class="form-group">
+            <label class="control-label" for="product_category">Update Product Category *</label>
+            <input type="text" class="form-control" id="product_category" placeholder="Enter Product Category" ng-model="updatedProduct.productCategory" required>
+            <span ng-style="updatedProduct.productCategory.length < 4 ? {'color':'red'}:{'color':'black'}" ng-show="updatedProduct.productCategory.length < 4">This field is mandatory</span>
+        </div>
+        <div class="form-group">
             <label class="control-label" for="product_ID">Product ID</label>
             <input type="text" class="form-control" id="product_ID" placeholder="Enter Product ID number" ng-model="updatedProduct.productID" ng-disabled="updatedProduct.productID!=''">
         </div>

@@ -15,6 +15,6 @@
         'DESIGN_EQUIPMENT_ORDERS':'/app/admin/viewDesignEquipmentRequest',
         'ARCHI_MEP_ORDERS':'/app/admin/viewArchPlanningRequest',
         'MODULAR_KITCHEN_ORDERS':'/app/admin/viewModularKitchenRequest',
-        'DELETE_ORDER':'/app/admin/deleteAnOrder/:deleteId'
+        'DELETE_ORDER':'/app/admin/deleteAnOrder'
     });
 })();

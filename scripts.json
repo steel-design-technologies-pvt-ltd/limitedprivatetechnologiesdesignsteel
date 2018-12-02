@@ -1,0 +1,8 @@
+[
+    "./app/public/javascripts/app-module.js",
+    "./app/public/javascripts/controllers/*.js",
+    "./app/public/javascripts/services/*.js",
+    "./app/public/javascripts/directives/*.js",
+    "./app/public/javascripts/constants/*.js",
+    "./app/public/javascripts/custom/*.js"
+]
