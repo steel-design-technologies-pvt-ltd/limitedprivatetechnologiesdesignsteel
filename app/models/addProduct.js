@@ -4,6 +4,7 @@ var productSchema = mongoose.Schema(
 		name: {type: String, required: false},
 		productImageURL : {type : String , required : false},
 		productID: {type: String, required: false},
+		productCategory: {type: String, required: false},
 		productCode: {type:String, required:false},
 		dimension: {type: String, required: false},
 		built_material: {type: String, required: false},

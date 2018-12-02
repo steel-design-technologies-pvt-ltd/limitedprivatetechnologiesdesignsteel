@@ -4,11 +4,10 @@
 			<big>{{buyEquipmentStaticData.pageHeading}}</big>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3  col-xs-12">
-			<h3>{{buyEquipmentStaticData.filterSection}}</h3>
-			<ul class="nav other-categories">
-				<li>
-					<input type="checkbox" name="restaurant">
-					<span>Restaurant Products</span>
+			<h3>{{buyEquipmentStaticData.filterSection.heading}}</h3>
+			<ul class="list-group other-categories">
+				<li filter-selection ng-repeat="category in buyEquipmentStaticData.filterSection.categoryList" class="list-group-item" ng-class="$index == 0?'active':''" ng-click="filterData(category['filter-code'])">
+					<span data-filterCode="{{category['filter-code']}}">{{category['filter-text']}}</span>
 				</li>
 			</ul>
 		</div>

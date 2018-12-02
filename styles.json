@@ -1,0 +1,7 @@
+[
+    "./app/public/stylesheets/lib/bootstrap.css",
+    "./app/public/stylesheets/lib/font-awesome.min.css",
+    "./app/public/stylesheets/lib/quote-carousel.css",
+    "./app/public/stylesheets/lib/angular-growl.css",
+    "./app/public/stylesheets/lib/style.css"
+]

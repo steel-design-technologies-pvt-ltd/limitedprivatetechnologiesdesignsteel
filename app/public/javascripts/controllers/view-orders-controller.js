@@ -10,7 +10,7 @@
 
         $scope.deleteOrder = function (orderToDelete) {
             console.log(orderToDelete);
-            viewOrderService.deleteAnOrder(orderToDelete).then(function (response) {
+            viewOrderService.deleteAnOrder({orderId: orderToDelete}).then(function (response) {
                 viewOrderService.getOrderDetails();
             }, function (error) {
                 console.log('error while deleting order');

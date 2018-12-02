@@ -86,9 +86,13 @@ router.route('/getSliderData')
     .get(function (req, res) {
         console.log('returning slider data');
         sliderData.find(function (err, productData) {
-            if (err)
+            if (err){
+                console.log('error in slider data fetch', err);
                 res.send(err);
-            res.json(productData);
+            } else {
+                console.log('product data',productData);
+                res.json(productData);
+            }
         });
     });
 
@@ -307,12 +311,12 @@ router.route('/admin/viewModularKitchenRequest')
 	for deleting an order ====================
 #########################################################*/
 
-router.route('/admin/deleteAnOrder/:deleteId')
+router.route('/admin/deleteAnOrder')
     .delete(function (req, res) {
-        var id = req.params.deleteId;
-        console.log('delete order req', req.params.deleteId);
+        var id = req.body.orderId;
+        console.log('delete order req', req.body.orderId);
         placeOrderSchema.remove({
-            _id: id
+            productID: id
         }, function (err) {
             if (err)
                 res.status(500).send();
@@ -331,6 +335,7 @@ router.route('/admin/addProductToDB')
                 name: req.body.name,
                 productImageURL: req.body.productImageURL,
                 productID: req.body.productID,
+                productCategory: req.body.productCategory,
                 productCode: req.body.productCode,
                 dimension: req.body.dimension,
                 built_material: req.body.buildMaterial,

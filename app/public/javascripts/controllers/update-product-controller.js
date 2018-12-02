@@ -22,6 +22,7 @@
                         name: response.data[0].name,
                         productPrice: response.data[0].productPrice,
                         productID: response.data[0].productID,
+                        productCategory: response.data[0].productCategory,
                         productCode: response.data[0].productCode,
                         vendorID: response.data[0].vendorID,
                         availabilityType: response.data[0].availabilityType,
